@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Politie Wereldkaart</title>
+
+  <!-- Leaflet (kaartbibliotheek) — gebruikt vanaf stap 2 -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- Leesbaar lettertype voor de doelgroep -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Ontdek de politie van de wereld 🌍👮</h1>
+    <p class="ondertitel">Klik op een land en los de taalopdracht op. Goed? Dan krijgt het land zijn vlag! 🏳️</p>
+    <div class="header-status">
+      <span id="vlag-teller" class="vlag-teller"></span>
+      <label class="stem-kiezer">🔊
+        <select id="stem-select" aria-label="Kies een stem voor het voorlezen"></select>
+      </label>
+      <button id="reset-knop" class="reset-knop" title="Begin opnieuw (wis alle vlaggen)">↺ Opnieuw</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Leaflet vult deze container met de kaart (zie js/map.js) -->
+    <div id="map"></div>
+  </main>
+
+  <!-- Het opdracht-venster (popup) — wordt gevuld vanaf stap 3 -->
+  <div id="task-popup" class="hidden" role="dialog" aria-modal="true" aria-labelledby="popup-titel"></div>
+
+  <!-- Scripts: volgorde is belangrijk -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/tasks.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>

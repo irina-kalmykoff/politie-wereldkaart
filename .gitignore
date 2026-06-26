@@ -1,0 +1,17 @@
+# OS-rommel
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Back-ups
+*.bak
+*.bak2
+
+# Logs
+*.log
