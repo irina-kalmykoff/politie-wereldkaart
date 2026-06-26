@@ -1314,5 +1314,293 @@
         "answers": ["kano"],
         "hints": ["Het woord begint met de letter k.", "Een smal bootje met een peddel is een ___."] }
     ]
+  },
+  "Romania": {
+    "flag": "🇷🇴", "iso": "ro",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "In Roemenië staat een oud kasteel. 🏰",
+        "sentence": "Op de heuvel staat een oud ___.",
+        "answer": "kasteel", "options": ["kasteel", "zwembad", "ijsje"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Roemenië heeft donkere bossen. 🌲",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "loopt", "door", "het", "donkere", "bos"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "In het bos huilt soms een dier. 🐺",
+        "sentence": "In de nacht huilt een ___.",
+        "answers": ["wolf"],
+        "hints": ["Het woord begint met de letter w.", "Een wild dier dat op een hond lijkt, is een ___."] }
+    ]
+  },
+  "Croatia": {
+    "flag": "🇭🇷", "iso": "hr",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Kroatië heeft een mooie blauwe zee. 🌊",
+        "sentence": "De politie vaart in een witte ___.",
+        "answer": "boot", "options": ["boot", "kar", "slee"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Kroatië heeft veel kleine eilanden. 🏝️",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "zwemt", "in", "de", "zee"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Op het strand liggen veel schelpen. 🐚",
+        "sentence": "Op het zand ligt een ___.",
+        "answers": ["schelp"],
+        "hints": ["Het woord begint met de letter s.", "Het harde huisje van een zeedier is een ___."] }
+    ]
+  },
+  "Serbia": {
+    "flag": "🇷🇸", "iso": "rs",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "In Servië speelt men graag muziek. 🎺",
+        "sentence": "De man speelt op een luide ___.",
+        "answer": "trompet", "options": ["trompet", "fiets", "lepel"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Servië ligt aan de Donau. 🌊",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "vaart", "langs", "de", "oever"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Bij het feest is veel herrie. 🎉",
+        "sentence": "De agent hoort hard ___.",
+        "answers": ["lawaai"],
+        "hints": ["Het woord begint met de letter l.", "Heel veel hard geluid samen is ___."] }
+    ]
+  },
+  "Mongolia": {
+    "flag": "🇲🇳", "iso": "mn",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "In Mongolië wonen mensen in een ger. ⛺",
+        "sentence": "De herder woont in een ronde ___.",
+        "answer": "tent", "options": ["tent", "flat", "boot"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Mongolië heeft een grote steppe. 🐎",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "rijdt", "op", "een", "paard"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Op de steppe waait het hard. 💨",
+        "sentence": "Op de vlakte waait de ___.",
+        "answers": ["wind"],
+        "hints": ["Het woord begint met de letter w.", "Lucht die hard beweegt, is de ___."] }
+    ]
+  },
+  "Kazakhstan": {
+    "flag": "🇰🇿", "iso": "kz",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "In Kazachstan worden raketten gelanceerd. 🚀",
+        "sentence": "De agent kijkt naar een grote ___.",
+        "answer": "raket", "options": ["raket", "taart", "schoen"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Kazachstan heeft een lege steppe. 🌾",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "rijdt", "door", "de", "leegte"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Hoog in de lucht vliegt de raket. 🚀",
+        "sentence": "De raket vliegt naar de ___.",
+        "answers": ["ruimte"],
+        "hints": ["Het woord begint met de letter r.", "Daar zweven de sterren en planeten: de ___."] }
+    ]
+  },
+  "Nepal": {
+    "flag": "🇳🇵", "iso": "np",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "In Nepal staat de hoogste berg. 🏔️",
+        "sentence": "De klimmer klimt op de hoge ___.",
+        "answer": "berg", "options": ["berg", "boot", "fiets"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Nepal heeft hoge, witte bergen. 🏔️",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "draagt", "de", "zware", "rugzak"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "De klimmer gebruikt een sterk koord. 🧗",
+        "sentence": "De man klimt met een sterk ___.",
+        "answers": ["touw"],
+        "hints": ["Het woord begint met de letter t.", "Een dik koord om mee te klimmen is een ___."] }
+    ]
+  },
+  "Iraq": {
+    "flag": "🇮🇶", "iso": "iq",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Irak heeft twee grote rivieren. 🌊",
+        "sentence": "De politie vaart op een brede ___.",
+        "answer": "rivier", "options": ["rivier", "berg", "woestijn"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Irak heeft heel oude steden. 🏛️",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "bewaakt", "een", "oude", "tempel"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Aan de palmboom hangen zoete vruchten. 🌴",
+        "sentence": "Aan de boom hangen zoete ___.",
+        "answers": ["dadels"],
+        "hints": ["Het woord begint met de letter d.", "Zoete bruine vruchten uit de woestijn zijn ___."] }
+    ]
+  },
+  "Jordan": {
+    "flag": "🇯🇴", "iso": "jo",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Jordanië heeft een rode rotsstad. 🏜️",
+        "sentence": "In de rots zit een oude ___.",
+        "answer": "stad", "options": ["stad", "boom", "vis"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "In Jordanië is veel zandwoestijn. 🐫",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "drinkt", "koud", "water"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Door de woestijn trekt een lange stoet. 🐫",
+        "sentence": "Een ___ trekt door het zand.",
+        "answers": ["karavaan"],
+        "hints": ["Het woord begint met de letter k.", "Een lange rij kamelen heet een ___."] }
+    ]
+  },
+  "United Arab Emirates": {
+    "flag": "🇦🇪", "iso": "ae",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "In Dubai staat de hoogste toren. 🏙️",
+        "sentence": "De agent kijkt omhoog naar de ___.",
+        "answer": "toren", "options": ["toren", "boot", "fiets"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Dubai heeft heel veel dure auto's. 🏎️",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "politie", "rijdt", "in", "een", "gouden", "auto"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "In de woestijn schijnt fel licht. ☀️",
+        "sentence": "Het is heet door de felle ___.",
+        "answers": ["zon"],
+        "hints": ["Het woord begint met de letter z.", "De grote gele bol aan de hemel is de ___."] }
+    ]
+  },
+  "Ghana": {
+    "flag": "🇬🇭", "iso": "gh",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Ghana ligt aan een warme kust. 🏖️",
+        "sentence": "De agent loopt over het gele ___.",
+        "answer": "strand", "options": ["strand", "ijs", "dak"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "In Ghana wordt veel cacao geteeld. 🍫",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "helpt", "op", "de", "markt"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Op het veld werken veel boeren. 🌾",
+        "sentence": "De boer plukt rijpe ___.",
+        "answers": ["cacao"],
+        "hints": ["Het woord begint met de letter c.", "Hiervan maakt men chocolade: ___."] }
+    ]
+  },
+  "Senegal": {
+    "flag": "🇸🇳", "iso": "sn",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "In Senegal klinkt vrolijke trommelmuziek. 🥁",
+        "sentence": "De man slaat op een grote ___.",
+        "answer": "trommel", "options": ["trommel", "fiets", "lepel"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Senegal ligt aan de oceaan. 🌊",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "helpt", "een", "visser", "aan", "wal"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "De vissers varen ver de zee op. 🎣",
+        "sentence": "De man vangt een grote ___.",
+        "answers": ["vis"],
+        "hints": ["Het woord begint met de letter v.", "Een dier dat in het water zwemt, is een ___."] }
+    ]
+  },
+  "Uganda": {
+    "flag": "🇺🇬", "iso": "ug",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "In Oeganda leven berggorilla's. 🦍",
+        "sentence": "In het bos zit een grote ___.",
+        "answer": "gorilla", "options": ["gorilla", "muis", "kip"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Oeganda heeft groene heuvels. ⛰️",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "beschermt", "de", "grote", "apen"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Bij het meer staan veel vogels. 🦩",
+        "sentence": "Aan het water staat een ___.",
+        "answers": ["flamingo"],
+        "hints": ["Het woord begint met de letter f.", "Een roze vogel op één poot is een ___."] }
+    ]
+  },
+  "Madagascar": {
+    "flag": "🇲🇬", "iso": "mg",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Op Madagaskar leven grappige maki's. 🐒",
+        "sentence": "In de boom springt een ___.",
+        "answer": "maki", "options": ["maki", "leeuw", "haai"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Madagaskar is een heel groot eiland. 🏝️",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "loopt", "door", "het", "bos"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Op het eiland groeien dikke bomen. 🌳",
+        "sentence": "Langs het pad staat een dikke ___.",
+        "answers": ["boom"],
+        "hints": ["Het woord begint met de letter b.", "Iets groots met takken en bladeren is een ___."] }
+    ]
+  },
+  "Bolivia": {
+    "flag": "🇧🇴", "iso": "bo",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Bolivia heeft een witte zoutvlakte. 🧂",
+        "sentence": "De agent rijdt over het witte ___.",
+        "answer": "zout", "options": ["zout", "ijs", "gras"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Bolivia ligt hoog in de Andes. 🏔️",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "klimt", "over", "de", "rotsen"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Hoog in de bergen is de lucht dun. 🏔️",
+        "sentence": "De klimmer ademt zware ___.",
+        "answers": ["lucht"],
+        "hints": ["Het woord begint met de letter l.", "Wat je inademt om te leven, is ___."] }
+    ]
+  },
+  "Ecuador": {
+    "flag": "🇪🇨", "iso": "ec",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Op de Galapagos leven grote schildpadden. 🐢",
+        "sentence": "Op het strand kruipt een ___.",
+        "answer": "schildpad", "options": ["schildpad", "fiets", "taart"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Ecuador ligt op de evenaar. 🌍",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "staat", "in", "de", "zon"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "In het oerwoud zit een grote slang. 🐍",
+        "sentence": "Om de tak hangt een ___.",
+        "answers": ["slang"],
+        "hints": ["Het woord begint met de letter s.", "Een lang dier zonder poten is een ___."] }
+    ]
+  },
+  "Greenland": {
+    "flag": "🇬🇱", "iso": "gl",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Groenland is bijna helemaal van ijs. ❄️",
+        "sentence": "De agent rijdt over het dikke ___.",
+        "answer": "ijs", "options": ["ijs", "zand", "gras"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "In Groenland leven grote ijsberen. 🐻‍❄️",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "ziet", "een", "witte", "ijsbeer"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Op zee drijven grote stukken ijs. 🧊",
+        "sentence": "Op het water drijft een ___.",
+        "answers": ["ijsberg"],
+        "hints": ["Het woord begint met de letter i.", "Een groot drijvend stuk ijs is een ___."] }
+    ]
   }
 }
