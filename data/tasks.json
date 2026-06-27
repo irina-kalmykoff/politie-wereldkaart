@@ -1650,5 +1650,293 @@
         "answers": ["ijsberg"],
         "hints": ["Het woord begint met de letter i.", "Een groot drijvend stuk ijs is een ___."] }
     ]
+  },
+  "Belarus": {
+    "flag": "🇧🇾", "iso": "by",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Wit-Rusland heeft grote, dichte bossen. 🌲",
+        "sentence": "Op de pet zit een gouden ___.",
+        "answer": "ster", "options": ["ster", "appel", "schoen"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Minsk is een nette, rustige stad. 🏙️",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "politie", "houdt", "goed", "de", "wacht"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "De agent schrijft alles netjes op. ✍️",
+        "sentence": "De agent maakt een ___.",
+        "answers": ["rapport"],
+        "hints": ["Het woord begint met de letter r.", "Een verslag van de politie is een ___."] }
+    ]
+  },
+  "Slovakia": {
+    "flag": "🇸🇰", "iso": "sk",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Slowakije heeft hoge bergen en kastelen. 🏰",
+        "sentence": "Hoog op de berg staat een ___.",
+        "answer": "kasteel", "options": ["kasteel", "boot", "taart"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Bratislava ligt aan een rivier. 🌊",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "staat", "op", "de", "brug"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "De politie let goed op de weg. 🚦",
+        "sentence": "De agent regelt het drukke ___.",
+        "answers": ["verkeer"],
+        "hints": ["Het woord begint met de letter v.", "Alle auto's op de weg samen zijn het ___."] }
+    ]
+  },
+  "Bulgaria": {
+    "flag": "🇧🇬", "iso": "bg",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Bulgarije is beroemd om rozen. 🌹",
+        "sentence": "De agent ruikt aan een rode ___.",
+        "answer": "roos", "options": ["roos", "schoen", "fiets"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Sofia is de grootste stad. 🏙️",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "loopt", "langs", "het", "plein"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "De politie zoekt een vermiste hond. 🐕",
+        "sentence": "De agent vindt de kleine ___.",
+        "answers": ["hond"],
+        "hints": ["Het woord begint met de letter h.", "Een dier dat blaft, is een ___."] }
+    ]
+  },
+  "Lithuania": {
+    "flag": "🇱🇹", "iso": "lt",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Litouwen heeft veel oude kerken. ⛪",
+        "sentence": "Bij de kerk staat een ___.",
+        "answer": "agent", "options": ["agent", "clown", "beer"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Vilnius is een mooie, oude stad. 🏛️",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "fietst", "naar", "het", "werk"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "De politie draagt een fel hesje. 🦺",
+        "sentence": "De agent draagt een geel ___.",
+        "answers": ["hesje"],
+        "hints": ["Het woord begint met de letter h.", "Een fel jasje dat goed opvalt is een ___."] }
+    ]
+  },
+  "Estonia": {
+    "flag": "🇪🇪", "iso": "ee",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Estland heeft veel computers en wifi. 💻",
+        "sentence": "De politie werkt met een ___.",
+        "answer": "computer", "options": ["computer", "hamer", "ballon"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Tallinn heeft een oude stadsmuur. 🧱",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "loopt", "op", "de", "muur"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Het is koud bij de zee. ❄️",
+        "sentence": "De agent draagt warme ___.",
+        "answers": ["wanten"],
+        "hints": ["Het woord begint met de letter w.", "Dikke handschoenen heten ___."] }
+    ]
+  },
+  "Latvia": {
+    "flag": "🇱🇻", "iso": "lv",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Letland ligt aan de Oostzee. 🌊",
+        "sentence": "De politie vaart op de koude ___.",
+        "answer": "zee", "options": ["zee", "berg", "woestijn"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Riga is een oude havenstad. ⚓",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "kijkt", "naar", "de", "boten"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Bij de haven staan grote kranen. 🏗️",
+        "sentence": "De agent ziet een hoge ___.",
+        "answers": ["kraan"],
+        "hints": ["Het woord begint met de letter k.", "Een hoge machine die zware dingen tilt is een ___."] }
+    ]
+  },
+  "Sri Lanka": {
+    "flag": "🇱🇰", "iso": "lk",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Sri Lanka heeft groene theevelden. 🍵",
+        "sentence": "De boer plukt verse ___.",
+        "answer": "thee", "options": ["thee", "steen", "schoen"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Op het eiland leven veel olifanten. 🐘",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "helpt", "een", "grote", "olifant"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "De agent fluit bij het verkeer. 🚦",
+        "sentence": "De agent blaast op zijn ___.",
+        "answers": ["fluitje"],
+        "hints": ["Het woord begint met de letter f.", "Hiermee maakt de agent een hoog geluid: een ___."] }
+    ]
+  },
+  "Myanmar": {
+    "flag": "🇲🇲", "iso": "mm",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Myanmar heeft gouden tempels. 🛕",
+        "sentence": "Op de heuvel staat een gouden ___.",
+        "answer": "tempel", "options": ["tempel", "fiets", "taart"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Het land heeft veel rivieren. 🌊",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "politie", "vaart", "op", "een", "vlot"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Op straat rijden veel fietstaxi's. 🚲",
+        "sentence": "De man rijdt in een kleine ___.",
+        "answers": ["riksja"],
+        "hints": ["Het woord begint met de letter r.", "Een fietstaxi heet een ___."] }
+    ]
+  },
+  "Oman": {
+    "flag": "🇴🇲", "iso": "om",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Oman heeft veel zand en kamelen. 🐫",
+        "sentence": "Door de woestijn loopt een ___.",
+        "answer": "kameel", "options": ["kameel", "pinguïn", "ijsbeer"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Muscat ligt aan de blauwe zee. 🌊",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "politie", "vaart", "langs", "de", "kust"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "In de woestijn is weinig water. 🏜️",
+        "sentence": "De man zoekt schoon ___.",
+        "answers": ["water"],
+        "hints": ["Het woord begint met de letter w.", "Dit drink je als je dorst hebt: ___."] }
+    ]
+  },
+  "Qatar": {
+    "flag": "🇶🇦", "iso": "qa",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Qatar heeft hoge, moderne torens. 🏙️",
+        "sentence": "Tussen de torens rijdt de ___.",
+        "answer": "politie", "options": ["politie", "trein", "boot"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Qatar is heel rijk en warm. ☀️",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "rijdt", "in", "een", "jeep"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Het is heet, de agent drinkt veel. 🥤",
+        "sentence": "De agent eet een zoete ___.",
+        "answers": ["dadel"],
+        "hints": ["Het woord begint met de letter d.", "Een zoete bruine vrucht uit de woestijn is een ___."] }
+    ]
+  },
+  "Tunisia": {
+    "flag": "🇹🇳", "iso": "tn",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Tunesië heeft witte huisjes aan zee. 🏖️",
+        "sentence": "De politie loopt over het witte ___.",
+        "answer": "strand", "options": ["strand", "ijs", "dak"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "In de woestijn maakt men films. 🎬",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "politie", "let", "op", "de", "markt"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Op de markt is het heel druk. 🛍️",
+        "sentence": "De agent loopt door de drukke ___.",
+        "answers": ["markt"],
+        "hints": ["Het woord begint met de letter m.", "Een plek met veel kraampjes is de ___."] }
+    ]
+  },
+  "Zimbabwe": {
+    "flag": "🇿🇼", "iso": "zw",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Zimbabwe heeft een enorme waterval. 💦",
+        "sentence": "De agent kijkt naar de grote ___.",
+        "answer": "waterval", "options": ["waterval", "taart", "schoen"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "In het park leven veel olifanten. 🐘",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "past", "op", "de", "dieren"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "Een stroper jaagt op de neushoorn. 🦏",
+        "sentence": "De ___ beschermt het park.",
+        "answers": ["boswachter"],
+        "hints": ["Het woord begint met de letter b.", "Hij past op het natuurpark: de ___."] }
+    ]
+  },
+  "Namibia": {
+    "flag": "🇳🇦", "iso": "na",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Namibië heeft een rode woestijn. 🏜️",
+        "sentence": "De jeep rijdt over het rode ___.",
+        "answer": "zand", "options": ["zand", "ijs", "gras"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "In de woestijn leven woestijnolifanten. 🐘",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "rijdt", "door", "de", "duinen"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "De zon brandt fel in de woestijn. ☀️",
+        "sentence": "De agent zet een grote ___ op.",
+        "answers": ["hoed"],
+        "hints": ["Het woord begint met de letter h.", "Iets dat je tegen de zon op je hoofd zet is een ___."] }
+    ]
+  },
+  "Venezuela": {
+    "flag": "🇻🇪", "iso": "ve",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Venezuela heeft de hoogste waterval. 💦",
+        "sentence": "De politie vaart naar de hoge ___.",
+        "answer": "waterval", "options": ["waterval", "berg", "toren"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Caracas is een drukke, grote stad. 🏙️",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "let", "op", "het", "plein"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "In het oerwoud leven kleurige vogels. 🦜",
+        "sentence": "Op de tak zit een mooie ___.",
+        "answers": ["papegaai"],
+        "hints": ["Het woord begint met de letter p.", "Een kleurige vogel die praat is een ___."] }
+    ]
+  },
+  "Uruguay": {
+    "flag": "🇺🇾", "iso": "uy",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "Uruguay is helemaal gek op voetbal. ⚽",
+        "sentence": "Voor het grote stadion staat de ___.",
+        "answer": "politie", "options": ["politie", "bakker", "clown"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Montevideo ligt aan de zee. 🌊",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "agent", "loopt", "over", "de", "boulevard"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "De agent fluit als de wedstrijd begint. 🏟️",
+        "sentence": "De agent fluit bij de ___.",
+        "answers": ["wedstrijd"],
+        "hints": ["Het woord begint met de letter w.", "Een voetbalspel heet een ___."] }
+    ]
+  },
+  "Suriname": {
+    "flag": "🇸🇷", "iso": "sr",
+    "tasks": [
+      { "level": 1, "type": "fill_choice",
+        "fact": "In Suriname spreekt men Nederlands. 🇸🇷",
+        "sentence": "De agent helpt de ___ op straat.",
+        "answer": "mensen", "options": ["mensen", "vissen", "bomen"] },
+      { "level": 2, "type": "drag_order",
+        "fact": "Suriname heeft een groot oerwoud. 🌴",
+        "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
+        "answer": ["De", "politie", "vaart", "de", "rivier", "op"], "einde": "." },
+      { "level": 3, "type": "fill_type",
+        "fact": "In het oerwoud is het heel groen. 🌳",
+        "sentence": "De agent loopt door het dichte ___.",
+        "answers": ["oerwoud"],
+        "hints": ["Het woord begint met de letter o.", "Een dicht, wild bos is het ___."] }
+    ]
   }
 }
