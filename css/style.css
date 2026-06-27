@@ -475,6 +475,59 @@ main {
 .luister-tekst { font-size: 1.2rem; line-height: 2.2; margin: 0; }
 .invul-luister { min-width: 84px; }
 
+/* ----- Niveau 4: hoofdletters & interpunctie ----- */
+.interp-intro { font-weight: 600; color: var(--kleur-kop); margin: 0 0 14px; }
+.interp-zin {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 1.3rem;
+  padding: 14px;
+  background: #f7fbff;
+  border: 2px dashed #b9cbe0;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+.interp-woord {
+  font-family: inherit;
+  font-size: 1.25rem;
+  background: #fff;
+  border: 2px solid #c7d6e6;
+  border-radius: 8px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+.interp-woord:hover:not(:disabled) { background: #f3f8ff; border-color: var(--kleur-accent); }
+.interp-woord.is-hoofd { border-color: var(--kleur-accent); background: #eaf3ff; font-weight: 700; }
+.interp-woord.interp-fout { border-color: var(--kleur-fout); background: #f7e0d8; }
+.interp-woord.interp-goed { border-color: var(--kleur-goed); background: #d8f3e0; color: var(--kleur-goed); }
+.interp-punt {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--kleur-kop);
+  min-width: 24px;
+  text-align: center;
+}
+.interp-punt.interp-fout { color: var(--kleur-fout); }
+.interp-punt.interp-goed { color: var(--kleur-goed); }
+
+.interp-label { margin: 0 0 8px; font-size: 0.95rem; color: #5a6b7b; }
+.interp-leestekens { display: flex; gap: 10px; }
+.leesteken-knop {
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 700;
+  width: 52px;
+  height: 52px;
+  background: #fff;
+  border: 2px solid #c7d6e6;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.leesteken-knop:hover:not(:disabled) { background: #f3f8ff; border-color: var(--kleur-accent); }
+.leesteken-knop.gekozen { background: var(--kleur-accent); color: #fff; border-color: var(--kleur-accent); }
+
 /* ----- Actieknoppen onder de opdracht ----- */
 .taak-acties { flex-wrap: wrap; }
 .controleer-knop {

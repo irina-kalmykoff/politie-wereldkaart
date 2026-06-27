@@ -25,6 +25,11 @@
         "type": "luister_tekst",
         "intro": "Luister goed. Schrijf de 3 woorden die je hoort.",
         "text": "De politie in Nederland werkt hard. Sommige agenten rijden op een [paard]. Andere agenten gaan op de [fiets]. Zo [helpen] ze de mensen."
+      },
+      {
+        "level": 4,
+        "type": "interpunctie",
+        "zin": "Amsterdam is de hoofdstad van Nederland."
       }
     ]
   },
@@ -85,6 +90,11 @@
         "sentence": "De dief moet naar de ___.",
         "answers": ["gevangenis"],
         "hints": ["Het woord begint met de letter g.", "Daar zitten de boeven opgesloten: de ___."]
+      },
+      {
+        "level": 4,
+        "type": "interpunctie",
+        "zin": "Berlijn is de hoofdstad van Duitsland."
       }
     ]
   },
@@ -116,6 +126,11 @@
         "sentence": "A car waits in the ___.",
         "answers": ["garage"],
         "hints": ["The word starts with the letter g.", "A car is parked or fixed here: the ___."]
+      },
+      {
+        "level": 4,
+        "type": "interpunctie",
+        "zin": "London is the capital of the United Kingdom."
       }
     ]
   },
@@ -146,6 +161,11 @@
         "sentence": "De ___ zag de dief.",
         "answers": ["getuige"],
         "hints": ["Het woord begint met de letter g.", "Iemand die iets zag, is een ___."]
+      },
+      {
+        "level": 4,
+        "type": "interpunctie",
+        "zin": "De hoofdstad van Frankrijk is Parijs."
       }
     ]
   },
@@ -462,7 +482,9 @@
         "answer": ["De", "politie", "bewaakt", "een", "oud", "museum"], "einde": "." },
       { "level": 3, "type": "luister_tekst",
         "intro": "Luister goed. Schrijf de 3 woorden die je hoort.",
-        "text": "De politie in Italië heeft een snelle [auto]. Het is een echte [Lamborghini]. De agenten rijden er heel [snel] mee." }
+        "text": "De politie in Italië heeft een snelle [auto]. Het is een echte [Lamborghini]. De agenten rijden er heel [snel] mee." },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Wat is Rome een mooie stad!" }
     ]
   },
   "Spain": {
@@ -480,7 +502,9 @@
         "fact": "In het donker schijnt de agent bij. 🔦",
         "sentence": "De agent pakt zijn ___.",
         "answers": ["zaklamp"],
-        "hints": ["Het woord begint met de letter z.", "Een lamp die je vasthoudt, is de ___."] }
+        "hints": ["Het woord begint met de letter z.", "Een lamp die je vasthoudt, is de ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Madrid is de hoofdstad van Spanje." }
     ]
   },
   "Portugal": {

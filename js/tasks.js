@@ -114,14 +114,18 @@ function toonTaak(land, data, taak) {
     actiesHTML = '<button class="hint-knop">💡 Hint</button>' +
                  '<button class="controleer-knop">Controleer</button>' +
                  '<button class="terug-knop">← Ander niveau</button>';
+  } else if (taak.type === 'interpunctie') {
+    opdrachtHTML = renderInterpunctie(taak);
+    actiesHTML = '<button class="controleer-knop">Controleer</button>' +
+                 '<button class="terug-knop">← Ander niveau</button>';
   } else {
     opdrachtHTML = '<p>Onbekend opdrachttype.</p>';
     actiesHTML = '<button class="terug-knop">← Kies ander niveau</button>';
   }
 
   const body = toonKaart(titel, sub,
-    (taak.fact ? '<p class="fact">💡 ' + taak.fact + '</p>' +
-      '<button class="lees-knop" type="button" aria-label="Lees de opdracht voor">🔊 Lees voor</button>' : '') +
+    (taak.fact ? '<p class="fact">💡 ' + taak.fact + '</p>' : '') +
+    ((taak.fact || taak.zin) ? '<button class="lees-knop" type="button" aria-label="Lees de opdracht voor">🔊 Lees voor</button>' : '') +
     (taak.instruction ? '<p class="instructie">' + taak.instruction + '</p>' : '') +
     opdrachtHTML +
     '<div class="feedback" aria-live="polite"></div>' +
@@ -139,16 +143,19 @@ function toonTaak(land, data, taak) {
   else if (taak.type === 'fill_type') bindFillType(body, taak, land);
   else if (taak.type === 'write_sentence') bindWriteSentence(body, taak, land);
   else if (taak.type === 'luister_tekst') bindLuisterTekst(body, taak, land);
+  else if (taak.type === 'interpunctie') bindInterpunctie(body, taak, land);
 }
 
 // Lees het weetje + de zin (of instructie) hardop voor, in de juiste taal.
 function leesTaakVoor(land, taak) {
   const lang = (TASKS[land.key] && TASKS[land.key].lang === 'en') ? 'en-GB' : 'nl-NL';
   if (typeof heeftStemVoor === 'function' && !heeftStemVoor(lang)) toonStemWaarschuwing(lang);
-  const stukken = [taak.fact];
+  const stukken = [];
+  if (taak.fact) stukken.push(taak.fact);
   if (taak.sentence) stukken.push(taak.sentence);
   else if (taak.instruction) stukken.push(taak.instruction);
   else if (taak.prompt) stukken.push(taak.prompt);
+  else if (taak.zin) stukken.push(taak.zin);
   if (typeof spreekUit === 'function') spreekUit(stukken.join('. '), lang);
 }
 
@@ -529,6 +536,102 @@ function bindLuisterTekst(body, t, land) {
       if (typeof geluidFout === 'function') geluidFout();
     }
   });
+}
+
+/* =========================================================
+   Niveau 4 — hoofdletters & interpunctie (interpunctie)
+   De speler maakt een zin goed: klik woorden aan voor een
+   hoofdletter, en kies het juiste leesteken aan het eind.
+   Elke zin noemt de hoofdstad van het land.
+   ========================================================= */
+function parseZin(zin) {
+  let s = (zin || '').trim();
+  let eind = '';
+  const laatste = s.charAt(s.length - 1);
+  if (laatste === '.' || laatste === '?' || laatste === '!') { eind = laatste; s = s.slice(0, -1).trim(); }
+  return { woorden: s.split(/\s+/), eind: eind };
+}
+
+function _moetHoofd(woord) {
+  const eerste = woord.charAt(0);
+  return eerste === eerste.toUpperCase() && eerste !== eerste.toLowerCase();
+}
+function _lowerEerste(w) { return w.charAt(0).toLowerCase() + w.slice(1); }
+function _upperEerste(w) { return w.charAt(0).toUpperCase() + w.slice(1); }
+
+function renderInterpunctie(t) {
+  const intro = t.intro ||
+    'Maak de zin goed. Tik woorden aan voor een hoofdletter en kies het juiste leesteken.';
+  return '<p class="interp-intro">' + intro + '</p>' +
+         '<div class="interp-zin"></div>' +
+         '<p class="interp-label">Kies het leesteken:</p>' +
+         '<div class="interp-leestekens">' +
+           ['.', '?', '!'].map(function (p) {
+             return '<button class="leesteken-knop" type="button" data-p="' + p + '">' + p + '</button>';
+           }).join('') +
+         '</div>';
+}
+
+function bindInterpunctie(body, t, land) {
+  const parsed = parseZin(t.zin);
+  const zinEl = body.querySelector('.interp-zin');
+  const fb = body.querySelector('.feedback');
+  const controleer = body.querySelector('.controleer-knop');
+  const hoofd = parsed.woorden.map(function () { return false; });   // begint allemaal klein
+  let gekozen = null;
+
+  function wisFb() { fb.className = 'feedback'; fb.innerHTML = ''; }
+
+  function teken() {
+    zinEl.innerHTML = parsed.woorden.map(function (w, i) {
+      const tekst = hoofd[i] ? _upperEerste(w) : _lowerEerste(w);
+      return '<button class="interp-woord' + (hoofd[i] ? ' is-hoofd' : '') + '" data-i="' + i + '">' + tekst + '</button>';
+    }).join(' ') + '<span class="interp-punt">' + (gekozen || '▢') + '</span>';
+    zinEl.querySelectorAll('.interp-woord').forEach(function (el) {
+      el.addEventListener('click', function () {
+        const i = +el.dataset.i;
+        hoofd[i] = !hoofd[i];
+        wisFb();
+        teken();
+      });
+    });
+  }
+
+  body.querySelectorAll('.leesteken-knop').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      gekozen = btn.getAttribute('data-p');
+      body.querySelectorAll('.leesteken-knop').forEach(function (b) { b.classList.remove('gekozen'); });
+      btn.classList.add('gekozen');
+      wisFb();
+      teken();
+    });
+  });
+
+  controleer.addEventListener('click', function () {
+    let goed = (gekozen === parsed.eind);
+    parsed.woorden.forEach(function (w, i) { if (hoofd[i] !== _moetHoofd(w)) goed = false; });
+
+    if (goed) {
+      fb.className = 'feedback feedback-goed';
+      fb.innerHTML = succesHTML(land);
+      controleer.disabled = true;
+      zinEl.querySelectorAll('.interp-woord').forEach(function (el) { el.disabled = true; el.classList.add('interp-goed'); });
+      const punt = zinEl.querySelector('.interp-punt'); if (punt) punt.classList.add('interp-goed');
+      body.querySelectorAll('.leesteken-knop').forEach(function (b) { b.disabled = true; });
+      belonen(land, t.level);
+    } else {
+      fb.className = 'feedback feedback-fout';
+      fb.innerHTML = '❌ Bijna! Welke woorden krijgen een hoofdletter? En klopt het leesteken?';
+      if (typeof geluidFout === 'function') geluidFout();
+      parsed.woorden.forEach(function (w, i) {
+        const el = zinEl.querySelector('.interp-woord[data-i="' + i + '"]');
+        if (el && hoofd[i] !== _moetHoofd(w)) el.classList.add('interp-fout');
+      });
+      if (gekozen !== parsed.eind) { const p = zinEl.querySelector('.interp-punt'); if (p) p.classList.add('interp-fout'); }
+    }
+  });
+
+  teken();
 }
 
 /* =========================================================
