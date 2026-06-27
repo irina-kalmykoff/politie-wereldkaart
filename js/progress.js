@@ -42,9 +42,19 @@ function getSolvedLevels(landKey) {
   return (p[landKey] && p[landKey].levels) ? p[landKey].levels.slice() : [];
 }
 
-// Hoeveel landen hebben een vlag?
+// Is dit land HELEMAAL af? (alle niveaus opgelost) — dan pas een vlag.
+function isCountryComplete(landKey) {
+  if (typeof TASKS === 'undefined' || !TASKS || !TASKS[landKey] || !TASKS[landKey].tasks) return false;
+  const totaal = TASKS[landKey].tasks.length;
+  return totaal > 0 && getSolvedLevels(landKey).length >= totaal;
+}
+
+// Hoeveel landen zijn helemaal af? = aantal behaalde vlaggen
 function countSolved() {
-  return Object.keys(loadProgress()).length;
+  const p = loadProgress();
+  let n = 0;
+  Object.keys(p).forEach(function (k) { if (isCountryComplete(k)) n++; });
+  return n;
 }
 
 // Alles wissen (de "Opnieuw"-knop)

@@ -11,7 +11,11 @@ let TASKS = null;
 
 fetch('data/tasks.json')
   .then(r => r.json())
-  .then(d => { TASKS = d; console.log('Opdrachten geladen voor', Object.keys(d).length, 'land(en).'); })
+  .then(d => {
+    TASKS = d;
+    console.log('Opdrachten geladen voor', Object.keys(d).length, 'land(en).');
+    if (typeof applyAllSolvedFlags === 'function') applyAllSolvedFlags();   // vlaggen terugzetten (heeft TASKS nodig)
+  })
   .catch(e => console.error('Kon opdrachten niet laden:', e));
 
 const NIVEAU_NAAM  = { 1: 'Makkelijk', 2: 'Gemiddeld', 3: 'Moeilijk', 4: 'Uitdaging' };
@@ -171,13 +175,31 @@ function toonStemWaarschuwing(lang) {
   knop.parentNode.insertBefore(n, knop.nextSibling);
 }
 
-// Beloning bij een juist antwoord: opslaan + vlag op de kaart + geluid
+// Beloning bij een juist antwoord: niveau opslaan; de vlag komt pas als het
+// hele land af is (alle niveaus). Geluid: belletje per niveau, fanfare bij vlag.
 function belonen(land, level) {
-  const wasSolved = (typeof isSolved === 'function') ? isSolved(land.key) : false;
+  const wasCompleet = (typeof isCountryComplete === 'function') ? isCountryComplete(land.key) : false;
   if (typeof markSolved === 'function') markSolved(land.key, level);
-  if (typeof plaatsVlag === 'function') plaatsVlag(land.key);
-  if (!wasSolved && typeof geluidVlag === 'function') geluidVlag();   // nieuw land → fanfare
-  else if (typeof geluidGoed === 'function') geluidGoed();            // ander niveau → belletje
+  const nuCompleet = (typeof isCountryComplete === 'function') ? isCountryComplete(land.key) : true;
+  if (nuCompleet) {
+    if (typeof plaatsVlag === 'function') plaatsVlag(land.key);
+    if (!wasCompleet && typeof geluidVlag === 'function') geluidVlag();   // net compleet → fanfare
+    else if (typeof geluidGoed === 'function') geluidGoed();
+  } else if (typeof geluidGoed === 'function') {
+    geluidGoed();   // niveau klaar, land nog niet compleet
+  }
+}
+
+// Succesboodschap: vlag als het land af is, anders "nog X niveaus te gaan".
+// Roep dit AAN NA belonen(), zodat de voortgang al is bijgewerkt.
+function succesBericht(land) {
+  const compleet = (typeof isCountryComplete === 'function') ? isCountryComplete(land.key) : true;
+  if (compleet) {
+    return '✅ Goed gedaan! 🎉<br><span class="vlag-behaald">' + vlagImg(land) + land.naamNL + ' heeft een vlag!</span>';
+  }
+  const totaal = (TASKS[land.key] && TASKS[land.key].tasks) ? TASKS[land.key].tasks.length : 0;
+  const teGaan = Math.max(0, totaal - getSolvedLevels(land.key).length);
+  return '✅ Goed gedaan! 🎉<br><span class="vlag-behaald">Nog ' + teGaan + ' niveau' + (teGaan === 1 ? '' : 's') + ' tot de vlag! 🏁</span>';
 }
 
 function succesHTML(land) {
@@ -221,9 +243,9 @@ function bindFillChoice(body, t, land) {
         body.querySelectorAll('.optie').forEach(function (b) { b.disabled = true; });
         const gap = body.querySelector('.gap');
         if (gap) { gap.textContent = t.answer; gap.classList.add('gap-vol'); }
-        fb.className = 'feedback feedback-goed';
-        fb.innerHTML = succesHTML(land);
         belonen(land, t.level);
+        fb.className = 'feedback feedback-goed';
+        fb.innerHTML = succesBericht(land);
       } else {
         btn.classList.add('optie-fout');
         btn.disabled = true;
@@ -308,11 +330,11 @@ function bindDragOrder(body, t, land) {
       return;
     }
     if (zin.join('|') === correct.join('|')) {
+      belonen(land, t.level);
       fb.className = 'feedback feedback-goed';
-      fb.innerHTML = succesHTML(land);
+      fb.innerHTML = succesBericht(land);
       zinEl.querySelectorAll('.woord-chip').forEach(function (el) { el.classList.add('chip-goed'); el.disabled = true; });
       controleer.disabled = true;
-      belonen(land, t.level);
     } else {
       fb.className = 'feedback feedback-fout';
       fb.innerHTML = '❌ Nog niet helemaal. Pas de volgorde aan en probeer opnieuw.';
@@ -378,11 +400,11 @@ function bindFillType(body, t, land) {
       }
     });
     if (allesGoed) {
+      belonen(land, t.level);
       fb.className = 'feedback feedback-goed';
-      fb.innerHTML = succesHTML(land);
+      fb.innerHTML = succesBericht(land);
       controleer.disabled = true;
       hintKnop.disabled = true;
-      belonen(land, t.level);
     } else {
       fb.className = 'feedback feedback-fout';
       fb.innerHTML = '❌ Bijna! Kijk naar het rode vakje. Klik op 💡 Hint voor hulp.';
@@ -526,10 +548,10 @@ function bindLuisterTekst(body, t, land) {
       }
     });
     if (allesGoed) {
-      fb.className = 'feedback feedback-goed';
-      fb.innerHTML = succesHTML(land);
-      controleer.disabled = true;
       belonen(land, t.level);
+      fb.className = 'feedback feedback-goed';
+      fb.innerHTML = succesBericht(land);
+      controleer.disabled = true;
     } else {
       fb.className = 'feedback feedback-fout';
       fb.innerHTML = '❌ Bijna! Luister nog een keer en kijk naar de rode vakjes.';
@@ -612,8 +634,9 @@ function bindInterpunctie(body, t, land) {
     parsed.woorden.forEach(function (w, i) { if (hoofd[i] !== _moetHoofd(w)) goed = false; });
 
     if (goed) {
+      belonen(land, t.level);
       fb.className = 'feedback feedback-goed';
-      fb.innerHTML = succesHTML(land);
+      fb.innerHTML = succesBericht(land);
       controleer.disabled = true;
       zinEl.querySelectorAll('.interp-woord').forEach(function (el) { el.disabled = true; el.classList.add('interp-goed'); });
       const punt = zinEl.querySelector('.interp-punt'); if (punt) punt.classList.add('interp-goed');

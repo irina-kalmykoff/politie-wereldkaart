@@ -35,7 +35,7 @@ const flagMarkers = {};     // landnaam (NAME) -> vlag-marker
 // Stijl hangt af van of het land al is opgelost (dan groen).
 // resetStyle() roept deze functie opnieuw aan, dus solved-landen blijven groen.
 function countryStyle(feature) {
-  const opgelost = (typeof isSolved === 'function') && isSolved(feature.properties.NAME);
+  const opgelost = (typeof isCountryComplete === 'function') && isCountryComplete(feature.properties.NAME);
   return {
     color: '#2b2b2b',
     weight: 1,
@@ -140,7 +140,9 @@ function plaatsVlag(landKey) {
 
 function applyAllSolvedFlags() {
   const p = loadProgress();
-  Object.keys(p).forEach(function (landKey) { plaatsVlag(landKey); });
+  Object.keys(p).forEach(function (landKey) {
+    if (typeof isCountryComplete === 'function' && isCountryComplete(landKey)) plaatsVlag(landKey);
+  });
   updateVlagTeller();
 }
 
