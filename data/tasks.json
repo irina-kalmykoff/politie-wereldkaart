@@ -201,6 +201,11 @@
         "sentence": "De agent werkt op het ___.",
         "answers": ["bureau"],
         "hints": ["Het woord begint met de letter b.", "Het politiekantoor heet het ___."]
+      },
+      {
+        "level": 4,
+        "type": "interpunctie",
+        "zin": "Spreekt de agent in Luxemburg drie talen?"
       }
     ]
   },
@@ -231,6 +236,11 @@
         "sentence": "De agent vangt de ___.",
         "answers": ["dief"],
         "hints": ["Het woord begint met de letter d.", "Iemand die steelt, is een ___."]
+      },
+      {
+        "level": 4,
+        "type": "interpunctie",
+        "zin": "In Kopenhagen staat de agent bij de brug."
       }
     ]
   },
@@ -261,6 +271,11 @@
         "sentence": "De auto heeft een hoge ___.",
         "answers": ["snelheid"],
         "hints": ["Het woord begint met de letter s.", "Hoe snel je gaat, is de ___."]
+      },
+      {
+        "level": 4,
+        "type": "interpunctie",
+        "zin": "In Bern draagt de agent een warme jas."
       }
     ]
   },
@@ -326,6 +341,11 @@
         "sentence": "De dief hoort het ___.",
         "answers": ["alarm"],
         "hints": ["Het woord begint met de letter a.", "Een hard geluid bij gevaar is het ___."]
+      },
+      {
+        "level": 4,
+        "type": "interpunctie",
+        "zin": "Draagt de politie groen in Dublin?"
       }
     ]
   },
@@ -572,7 +592,9 @@
         "fact": "De agent laat zijn pasje zien. 🪪",
         "sentence": "De agent toont zijn ___.",
         "answers": ["penning"],
-        "hints": ["Het woord begint met de letter p.", "Het politiebewijs heet de ___."] }
+        "hints": ["Het woord begint met de letter p.", "Het politiebewijs heet de ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Vaart de politie graag in Stockholm?" }
     ]
   },
   "Finland": {
@@ -590,7 +612,9 @@
         "fact": "De agenten lopen elke nacht rond. 🌙",
         "sentence": "De agenten lopen op ___.",
         "answers": ["patrouille"],
-        "hints": ["Het woord begint met de letter p.", "Een ronde lopen om te bewaken, is op ___."] }
+        "hints": ["Het woord begint met de letter p.", "Een ronde lopen om te bewaken, is op ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Helsinki schaatst de politie soms." }
     ]
   },
   "Poland": {
@@ -608,7 +632,9 @@
         "fact": "Fout parkeren mag niet. 🚗",
         "sentence": "Hij krijgt een ___ voor parkeren.",
         "answers": ["bekeuring"],
-        "hints": ["Het woord begint met de letter b.", "Een straf-briefje heet een ___."] }
+        "hints": ["Het woord begint met de letter b.", "Een straf-briefje heet een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Warschau regelt de politie het verkeer." }
     ]
   },
   "Czechia": {
@@ -626,7 +652,9 @@
         "fact": "De politie zoekt sporen op glas. 🔍",
         "sentence": "Op het glas zit een ___.",
         "answers": ["vingerafdruk"],
-        "hints": ["Het woord begint met de letter v.", "Het spoor van je vinger is de ___."] }
+        "hints": ["Het woord begint met de letter v.", "Het spoor van je vinger is de ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Praag zoekt de politie een dief." }
     ]
   },
   "Hungary": {
@@ -644,7 +672,9 @@
         "fact": "De politiehond ruikt heel goed. 🐕",
         "sentence": "De hond volgt een vers ___.",
         "answers": ["spoor"],
-        "hints": ["Het woord begint met de letter s.", "Wat de boef achterliet, is een ___."] }
+        "hints": ["Het woord begint met de letter s.", "Wat de boef achterliet, is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Boedapest staat de agent op de brug." }
     ]
   },
   "Greece": {
@@ -778,7 +808,9 @@
         "fact": "Bij de rivier ligt dicht oerwoud. 🌴",
         "sentence": "De agent zoekt in het ___.",
         "answers": ["oerwoud"],
-        "hints": ["Het woord begint met de letter o.", "Een dicht, wild bos is het ___."] }
+        "hints": ["Het woord begint met de letter o.", "Een dicht, wild bos is het ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Wat is het druk in Brasília!" }
     ]
   },
   "Russia": {
@@ -836,7 +868,9 @@
         "fact": "Op straat staat een grote menigte. 👥",
         "sentence": "De agent let op de ___.",
         "answers": ["menigte"],
-        "hints": ["Het woord begint met de letter m.", "Heel veel mensen samen zijn een ___."] }
+        "hints": ["Het woord begint met de letter m.", "Heel veel mensen samen zijn een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In New Delhi rijdt de politie op een motor." }
     ]
   },
   "Turkey": {
@@ -854,7 +888,9 @@
         "fact": "Een zakkenroller steelt op de markt. 👜",
         "sentence": "De ___ steelt een tas.",
         "answers": ["zakkenroller"],
-        "hints": ["Het woord begint met de letter z.", "Iemand die uit je zak steelt, is een ___."] }
+        "hints": ["Het woord begint met de letter z.", "Iemand die uit je zak steelt, is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Ankara draagt de agent een blauw uniform." }
     ]
   },
   "Mexico": {
@@ -872,7 +908,9 @@
         "fact": "De politie rijdt door de woestijn. 🌵",
         "sentence": "De auto rijdt door het droge ___.",
         "answers": ["zand"],
-        "hints": ["Het woord begint met de letter z.", "De kleine korreltjes in de woestijn zijn ___."] }
+        "hints": ["Het woord begint met de letter z.", "De kleine korreltjes in de woestijn zijn ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Wat is het druk in Mexico-stad!" }
     ]
   },
   "Argentina": {
@@ -890,7 +928,9 @@
         "fact": "Veel mensen kijken naar voetbal. ⚽",
         "sentence": "Een ___ juicht heel hard.",
         "answers": ["supporter"],
-        "hints": ["Het woord begint met de letter s.", "Een fan van een team is een ___."] }
+        "hints": ["Het woord begint met de letter s.", "Een fan van een team is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Buenos Aires rijdt de politie te paard." }
     ]
   },
   "South Africa": {
@@ -908,7 +948,9 @@
         "fact": "Sommige mensen jagen illegaal. 🚫",
         "sentence": "De politie pakt de ___.",
         "answers": ["stroper"],
-        "hints": ["Het woord begint met de letter s.", "Iemand die illegaal jaagt, is een ___."] }
+        "hints": ["Het woord begint met de letter s.", "Iemand die illegaal jaagt, is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Pretoria rijdt de politie in een jeep." }
     ]
   },
   "Egypt": {
@@ -1000,7 +1042,9 @@
         "fact": "De politie waarschuwt voor de vulkaan. 🌋",
         "sentence": "De agent geeft een ___ af.",
         "answers": ["waarschuwing"],
-        "hints": ["Het woord begint met de letter w.", "Een bericht over gevaar is een ___."] }
+        "hints": ["Het woord begint met de letter w.", "Een bericht over gevaar is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Jakarta staat de politie in de file." }
     ]
   },
   "South Korea": {
@@ -1018,7 +1062,9 @@
         "fact": "De politie gebruikt slimme robots. 🤖",
         "sentence": "De agent heeft een kleine ___.",
         "answers": ["robot"],
-        "hints": ["Het woord begint met de letter r.", "Een machine die zelf werkt, is een ___."] }
+        "hints": ["Het woord begint met de letter r.", "Een machine die zelf werkt, is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Seoul fietst de agent door de stad." }
     ]
   },
   "Thailand": {
@@ -1036,7 +1082,9 @@
         "fact": "Op straat rijden veel tuktuks. 🛺",
         "sentence": "De agent rijdt in een kleine ___.",
         "answers": ["tuktuk"],
-        "hints": ["Het woord begint met de letter t.", "Een klein taxiwagentje heet een ___."] }
+        "hints": ["Het woord begint met de letter t.", "Een klein taxiwagentje heet een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Bangkok helpt de politie een toerist." }
     ]
   },
   "New Zealand": {
