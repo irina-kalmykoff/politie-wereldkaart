@@ -3,7 +3,7 @@
 Een educatieve webpagina: een **interactieve, fysieke wereldkaart** waarop je op
 een land klikt en een korte **taalopdracht over een leuk politie-weetje** oplost.
 Goed opgelost → het land krijgt zijn **vlag** en kleurt groen. Bedoeld voor
-mensen met **taalmoeilijkheden** (bv. dyslexie, NT2), in **drie
+mensen met **taalmoeilijkheden** (bv. dyslexie, NT2), in **vier
 moeilijkheidsniveaus**, met **voorlezen** en **geluid**.
 
 > Gemaakt met pure HTML/CSS/JavaScript — geen build-tools, geen server-code,
@@ -11,15 +11,37 @@ moeilijkheidsniveaus**, met **voorlezen** en **geluid**.
 
 ---
 
+## 📊 Stand van het project
+
+Klaar en speelbaar. **95 landen** wereldwijd, elk met **4 niveaus** — samen **380
+opdrachten**. De vlag van een land verschijnt pas als alle vier de niveaus zijn opgelost.
+
+- **Niveau 1** — kies het juiste woord (uit 3 opties)
+- **Niveau 2** — sleep of klik woorden in de juiste volgorde
+- **Niveau 3** — typ het ontbrekende woord (tolerante controle + oplopende tips/synoniemen);
+  bij enkele landen een **luister-dictee** (woorden uit een voorgelezen tekstje)
+- **Niveau 4** — **hoofdletters & interpunctie**: maak een politie-zin met een stad
+  erin goed en kies het juiste leesteken (`.` `?` `!`)
+
+Verder: voortgang in de browser, voorlezen (NL/EN) met stemkiezer, geluidseffecten,
+en een toegankelijk ontwerp (Lexend, hoog contrast, geen tijdsdruk).
+
+**Online status:** de code staat op GitHub. **GitHub Pages is nog niet ingeschakeld**,
+dus de live-URL is nog niet actief — zie [Online publiceren](#-online-publiceren) om
+hem aan te zetten.
+
+---
+
 ## ✨ Wat kan het?
 
 - **Wereldkaart** met reliëf-ondergrond (geografisch, niet politiek) en klikbare landgrenzen.
-- **63 landen** met elk 3 opdrachten over een politie-weetje (Nederlands; het VK in het Engels).
-- **Drie niveaus** per land:
+- **95 landen** met elk 4 opdrachten over politie (Nederlands; het VK in het Engels).
+- **Vier niveaus** per land:
   1. **Makkelijk** — kies het juiste woord uit drie opties.
   2. **Gemiddeld** — sleep (of klik) woorden in de juiste volgorde.
-  3. **Moeilijk** — typ zelf het ontbrekende woord (met hint + tolerante spellingcontrole).
-- **Beloning**: een echte vlag op de kaart + groene inkleuring, en een teller bovenaan.
+  3. **Moeilijk** — typ zelf het ontbrekende woord (hint/synoniem + tolerante spellingcontrole), of een **luister-dictee**.
+  4. **Uitdaging** — zet hoofdletters goed en kies het juiste leesteken in een politie-zin.
+- **Beloning**: pas als álle vier de niveaus af zijn, krijgt het land een echte vlag + groene inkleuring (met teller bovenaan).
 - **Voortgang** wordt in de browser bewaard (`localStorage`) — blijft staan na herladen.
 - **Geluid**: 🔊 voorlezen (Nederlandse/Engelse stem) en vrolijke geluidjes bij goed/fout/vlag.
 - **Toegankelijk**: leesbaar lettertype (Lexend), groot, hoog contrast, geen tijdsdruk, vriendelijke feedback.
@@ -107,7 +129,7 @@ Per land: een vlag-emoji (niet gebruikt voor weergave, alleen documentatie), een
 
 | Veld | Betekenis |
 |---|---|
-| `type` | `fill_choice` (niv. 1), `drag_order` (niv. 2) of `fill_type` (niv. 3) |
+| `type` | `fill_choice` (niv. 1), `drag_order` (niv. 2), `fill_type` of `luister_tekst` (niv. 3), `interpunctie` (niv. 4) |
 | `fact` | het politie-weetje (wordt getoond én voorgelezen) |
 | `sentence` | de zin; `___` (drie underscores) markeert het gat |
 | `answer` / `options` | juiste woord + 3 keuzeknoppen (niveau 1) |
@@ -193,6 +215,8 @@ voordat je ze ergens officieel gebruikt.
 - [x] Stap 3 — Opdracht-venster + niveaukeuze
 - [x] Stap 4 — Drie opdrachttypes werkend
 - [x] Stap 5 — Vlag + voortgang opslaan
-- [x] Stap 6 — Inhoud: **63 landen**, wereldwijd, divers
+- [x] Stap 6 — Inhoud: **95 landen**, wereldwijd, divers, elk 4 niveaus
 - [x] Stap 7 — Geluid: voorlezen + geluidjes + stemkiezer
-- [x] Stap 8–10 — Afronding: README, publiceren, attributie
+- [x] Stap 8–10 — Afronding: README, attributie, code op GitHub
+- [ ] **Publiceren: GitHub Pages nog inschakelen** (Settings → Pages → branch `main`, map `/root`)
+      → daarna live op `https://irina-kalmykoff.github.io/politie-wereldkaart/`
