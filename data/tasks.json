@@ -1156,7 +1156,9 @@
         "fact": "Op het water drijft een markt. 🛶",
         "sentence": "De agent vaart over het ___.",
         "answers": ["water"],
-        "hints": ["Het woord begint met de letter w.", "In de rivier en de zee zit veel ___."] }
+        "hints": ["Het woord begint met de letter w.", "In de rivier en de zee zit veel ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Rijdt de politie op een brommer in Hanoi?" }
     ]
   },
   "Philippines": {
@@ -1174,7 +1176,9 @@
         "fact": "Soms komt er een grote storm. 🌀",
         "sentence": "De politie waarschuwt voor de ___.",
         "answers": ["storm"],
-        "hints": ["Het woord begint met de letter s.", "Heel harde wind en regen is een ___."] }
+        "hints": ["Het woord begint met de letter s.", "Heel harde wind en regen is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Manila staat de politie op de markt." }
     ]
   },
   "Pakistan": {
@@ -1192,7 +1196,9 @@
         "fact": "Op straat rijden kleurige bussen. 🚌",
         "sentence": "De agent ziet een volle ___.",
         "answers": ["bus"],
-        "hints": ["Het woord begint met de letter b.", "Een grote wagen voor veel mensen is een ___."] }
+        "hints": ["Het woord begint met de letter b.", "Een grote wagen voor veel mensen is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Islamabad let de politie op de weg." }
     ]
   },
   "Peru": {
@@ -1210,7 +1216,9 @@
         "fact": "In Peru speelt men de panfluit. 🎶",
         "sentence": "De man speelt op een ___.",
         "answers": ["panfluit"],
-        "hints": ["Het woord begint met de letter p.", "Een fluit van rietjes heet een ___."] }
+        "hints": ["Het woord begint met de letter p.", "Een fluit van rietjes heet een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Lima rijdt de politie op een fiets." }
     ]
   },
   "Chile": {
@@ -1228,7 +1236,9 @@
         "fact": "In de mijn werken veel mensen. ⛏️",
         "sentence": "De arbeider werkt in de ___.",
         "answers": ["mijn"],
-        "hints": ["Het woord begint met de letter m.", "Een diepe gang voor goud of koper is de ___."] }
+        "hints": ["Het woord begint met de letter m.", "Een diepe gang voor goud of koper is de ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Santiago draagt de agent een zonnebril." }
     ]
   },
   "Colombia": {
@@ -1246,7 +1256,9 @@
         "fact": "In het oerwoud leven kleurige vogels. 🦜",
         "sentence": "Op de tak zit een ___.",
         "answers": ["papegaai"],
-        "hints": ["Het woord begint met de letter p.", "Een kleurige vogel die praat, is een ___."] }
+        "hints": ["Het woord begint met de letter p.", "Een kleurige vogel die praat, is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Bogota rijdt de politie in de bergen." }
     ]
   },
   "Cuba": {
@@ -1264,7 +1276,9 @@
         "fact": "Cuba is bekend om sigaren. 🚬",
         "sentence": "De man rookt een dikke ___.",
         "answers": ["sigaar"],
-        "hints": ["Het woord begint met de letter s.", "Een dikke rol tabak om te roken is een ___."] }
+        "hints": ["Het woord begint met de letter s.", "Een dikke rol tabak om te roken is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Havana loopt de politie langs de zee." }
     ]
   },
   "Israel": {
@@ -1282,7 +1296,9 @@
         "fact": "In de grond ligt soms een schat. 💰",
         "sentence": "De man graaft naar een ___.",
         "answers": ["schat"],
-        "hints": ["Het woord begint met de letter s.", "Verborgen goud en juwelen zijn een ___."] }
+        "hints": ["Het woord begint met de letter s.", "Verborgen goud en juwelen zijn een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Jeruzalem bewaakt de politie de oude stad." }
     ]
   },
   "Iran": {
@@ -1300,7 +1316,9 @@
         "fact": "In de bergen ligt veel sneeuw. 🏔️",
         "sentence": "De agent rijdt door diepe ___.",
         "answers": ["sneeuw"],
-        "hints": ["Het woord begint met de letter s.", "Witte vlokken in de winter zijn ___."] }
+        "hints": ["Het woord begint met de letter s.", "Witte vlokken in de winter zijn ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Teheran draagt de agent een net uniform." }
     ]
   },
   "Ethiopia": {
@@ -1318,7 +1336,9 @@
         "fact": "In Ethiopië wonen mensen in dorpen. 🏘️",
         "sentence": "De agent helpt in het ___.",
         "answers": ["dorp"],
-        "hints": ["Het woord begint met de letter d.", "Een klein plaatsje met huizen is een ___."] }
+        "hints": ["Het woord begint met de letter d.", "Een klein plaatsje met huizen is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Werkt de politie hard in Addis Abeba?" }
     ]
   },
   "Tanzania": {
@@ -1336,7 +1356,9 @@
         "fact": "Op de savanne lopen veel dieren. 🦓",
         "sentence": "De agent telt de wilde ___.",
         "answers": ["dieren"],
-        "hints": ["Het woord begint met de letter d.", "Leeuwen en zebra's zijn wilde ___."] }
+        "hints": ["Het woord begint met de letter d.", "Leeuwen en zebra's zijn wilde ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Dodoma rijdt de politie in een jeep." }
     ]
   },
   "Algeria": {
@@ -1354,7 +1376,9 @@
         "fact": "In de woestijn groeien palmbomen. 🌴",
         "sentence": "Bij de bron staat een ___.",
         "answers": ["palmboom"],
-        "hints": ["Het woord begint met de letter p.", "Een boom met grote bladeren in de woestijn is een ___."] }
+        "hints": ["Het woord begint met de letter p.", "Een boom met grote bladeren in de woestijn is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Algiers loopt de politie langs de haven." }
     ]
   },
   "Cambodia": {
@@ -1372,7 +1396,9 @@
         "fact": "In de jungle leven veel apen. 🐒",
         "sentence": "In de boom zit een ___.",
         "answers": ["aap"],
-        "hints": ["Het woord begint met de letter a.", "Een dier dat klimt en op mensen lijkt, is een ___."] }
+        "hints": ["Het woord begint met de letter a.", "Een dier dat klimt en op mensen lijkt, is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Phnom Penh rijdt de politie op een motor." }
     ]
   },
   "Malaysia": {
@@ -1390,7 +1416,9 @@
         "fact": "In de jungle groeit een grote bloem. 🌺",
         "sentence": "De agent ruikt aan de ___.",
         "answers": ["bloem"],
-        "hints": ["Het woord begint met de letter b.", "Iets kleurigs dat in de tuin groeit, is een ___."] }
+        "hints": ["Het woord begint met de letter b.", "Iets kleurigs dat in de tuin groeit, is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Wat is Kuala Lumpur een grote stad!" }
     ]
   },
   "Bangladesh": {
@@ -1408,7 +1436,9 @@
         "fact": "Op de rivier varen kleine bootjes. 🛶",
         "sentence": "De man peddelt in een ___.",
         "answers": ["kano"],
-        "hints": ["Het woord begint met de letter k.", "Een smal bootje met een peddel is een ___."] }
+        "hints": ["Het woord begint met de letter k.", "Een smal bootje met een peddel is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Dhaka regelt de politie het verkeer." }
     ]
   },
   "Romania": {
@@ -1426,7 +1456,9 @@
         "fact": "In het bos huilt soms een dier. 🐺",
         "sentence": "In de nacht huilt een ___.",
         "answers": ["wolf"],
-        "hints": ["Het woord begint met de letter w.", "Een wild dier dat op een hond lijkt, is een ___."] }
+        "hints": ["Het woord begint met de letter w.", "Een wild dier dat op een hond lijkt, is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Boekarest draagt de agent een nette pet." }
     ]
   },
   "Croatia": {
@@ -1444,7 +1476,9 @@
         "fact": "Op het strand liggen veel schelpen. 🐚",
         "sentence": "Op het zand ligt een ___.",
         "answers": ["schelp"],
-        "hints": ["Het woord begint met de letter s.", "Het harde huisje van een zeedier is een ___."] }
+        "hints": ["Het woord begint met de letter s.", "Het harde huisje van een zeedier is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Zagreb rijdt de politie door de oude stad." }
     ]
   },
   "Serbia": {
@@ -1462,7 +1496,9 @@
         "fact": "Bij het feest is veel herrie. 🎉",
         "sentence": "De agent hoort hard ___.",
         "answers": ["lawaai"],
-        "hints": ["Het woord begint met de letter l.", "Heel veel hard geluid samen is ___."] }
+        "hints": ["Het woord begint met de letter l.", "Heel veel hard geluid samen is ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "In Belgrado loopt de politie door het centrum." }
     ]
   },
   "Mongolia": {
