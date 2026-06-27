@@ -29,7 +29,7 @@
       {
         "level": 4,
         "type": "interpunctie",
-        "zin": "Amsterdam is de hoofdstad van Nederland."
+        "zin": "In Amsterdam fietst de politie veel."
       }
     ]
   },
@@ -64,7 +64,7 @@
       {
         "level": 4,
         "type": "interpunctie",
-        "zin": "Is Brussel de hoofdstad van België?"
+        "zin": "Werkt de politie hard in Brussel?"
       }
     ]
   },
@@ -99,7 +99,7 @@
       {
         "level": 4,
         "type": "interpunctie",
-        "zin": "Berlijn is de hoofdstad van Duitsland."
+        "zin": "In Berlijn rijdt de politie snel."
       }
     ]
   },
@@ -135,7 +135,7 @@
       {
         "level": 4,
         "type": "interpunctie",
-        "zin": "London is the capital of the United Kingdom."
+        "zin": "Police in London wear tall helmets."
       }
     ]
   },
@@ -170,7 +170,7 @@
       {
         "level": 4,
         "type": "interpunctie",
-        "zin": "De hoofdstad van Frankrijk is Parijs."
+        "zin": "In Parijs rijdt de politie te paard."
       }
     ]
   },
@@ -295,7 +295,7 @@
       {
         "level": 4,
         "type": "interpunctie",
-        "zin": "Is Wenen de hoofdstad van Oostenrijk?"
+        "zin": "Loopt de agent door Wenen?"
       }
     ]
   },
@@ -494,7 +494,7 @@
         "intro": "Luister goed. Schrijf de 3 woorden die je hoort.",
         "text": "De politie in Italië heeft een snelle [auto]. Het is een echte [Lamborghini]. De agenten rijden er heel [snel] mee." },
       { "level": 4, "type": "interpunctie",
-        "zin": "Wat is Rome een mooie stad!" }
+        "zin": "Wat rijdt de politie snel in Rome!" }
     ]
   },
   "Spain": {
@@ -514,7 +514,7 @@
         "answers": ["zaklamp"],
         "hints": ["Het woord begint met de letter z.", "Een lamp die je vasthoudt, is de ___."] },
       { "level": 4, "type": "interpunctie",
-        "zin": "Madrid is de hoofdstad van Spanje." }
+        "zin": "In Madrid helpt de politie de mensen." }
     ]
   },
   "Portugal": {
@@ -534,7 +534,7 @@
         "answers": ["redt"],
         "hints": ["Het woord begint met de letter r.", "Iemand uit gevaar halen is ___."] },
       { "level": 4, "type": "interpunctie",
-        "zin": "Lissabon ligt aan de zee." }
+        "zin": "De politie vaart langs Lissabon." }
     ]
   },
   "Norway": {
@@ -554,7 +554,7 @@
         "answers": ["melding"],
         "hints": ["Het woord begint met de letter m.", "Een bericht over iets dat gebeurt, is een ___."] },
       { "level": 4, "type": "interpunctie",
-        "zin": "Oslo is de hoofdstad van Noorwegen." }
+        "zin": "In Oslo draagt de politie geen pistool." }
     ]
   },
   "Sweden": {
@@ -664,7 +664,7 @@
         "answers": ["eiland"],
         "hints": ["Het woord begint met de letter e.", "Land midden in de zee is een ___."] },
       { "level": 4, "type": "interpunctie",
-        "zin": "Wat is Athene een oude stad!" }
+        "zin": "Wat is de politie druk in Athene!" }
     ]
   },
   "Iceland": {
@@ -700,7 +700,7 @@
         "answers": ["verhoor"],
         "hints": ["Het woord begint met de letter v.", "Veel vragen stellen heet een ___."] },
       { "level": 4, "type": "interpunctie",
-        "zin": "Washington is de hoofdstad van Amerika." }
+        "zin": "In Washington rijdt de politie rond." }
     ]
   },
   "Canada": {
@@ -720,7 +720,7 @@
         "answers": ["helikopter"],
         "hints": ["Het woord begint met de letter h.", "Hij vliegt met grote wieken: de ___."] },
       { "level": 4, "type": "interpunctie",
-        "zin": "Ligt Ottawa in Canada?" }
+        "zin": "Rijdt de politie te paard in Ottawa?" }
     ]
   },
   "Japan": {
@@ -740,7 +740,7 @@
         "answers": ["trein"],
         "hints": ["Het woord begint met de letter t.", "Hij rijdt op rails: de ___."] },
       { "level": 4, "type": "interpunctie",
-        "zin": "Ken jij de stad Tokio?" }
+        "zin": "In Tokio werkt de politie in een koban." }
     ]
   },
   "Australia": {
@@ -760,7 +760,7 @@
         "answers": ["strand"],
         "hints": ["Het woord begint met de letter s.", "Het zand bij de zee is het ___."] },
       { "level": 4, "type": "interpunctie",
-        "zin": "Canberra is de hoofdstad van Australië." }
+        "zin": "De politie rijdt door Canberra." }
     ]
   },
   "Brazil": {
@@ -798,7 +798,7 @@
         "answers": ["camera"],
         "hints": ["Het woord begint met de letter c.", "Dit apparaat maakt films: de ___."] },
       { "level": 4, "type": "interpunctie",
-        "zin": "Wat is Moskou een grote stad!" }
+        "zin": "Wat is de politie streng in Moskou!" }
     ]
   },
   "China": {
@@ -818,7 +818,7 @@
         "answers": ["drone"],
         "hints": ["Het woord begint met de letter d.", "Een klein vliegtuig zonder piloot is de ___."] },
       { "level": 4, "type": "interpunctie",
-        "zin": "Peking is de hoofdstad van China." }
+        "zin": "In Peking gebruikt de politie een drone." }
     ]
   },
   "India": {
@@ -928,7 +928,7 @@
         "answers": ["kameel"],
         "hints": ["Het woord begint met de letter k.", "Een woestijndier met bulten is een ___."] },
       { "level": 4, "type": "interpunctie",
-        "zin": "Caïro is een heel grote stad." }
+        "zin": "In Caïro werken kamelen bij de politie." }
     ]
   },
   "Morocco": {
