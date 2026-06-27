@@ -923,10 +923,10 @@
         "instruction": "Sleep de woorden in de juiste volgorde. Let op: hoofdletter aan het begin en een punt aan het eind.",
         "answer": ["De", "politie", "vaart", "op", "de", "Nijl"], "einde": "." },
       { "level": 3, "type": "fill_type",
-        "fact": "In de woestijn is het heet. 🐫",
-        "sentence": "Door het zand loopt een ___.",
-        "answers": ["kameel"],
-        "hints": ["Het woord begint met de letter k.", "Een woestijndier met bulten is een ___."] },
+        "fact": "De agent zoekt sporen in het zand. 🔍",
+        "sentence": "In het zand ligt een vers ___.",
+        "answers": ["spoor"],
+        "hints": ["Het woord begint met de letter s.", "Een afdruk in het zand is een ___."] },
       { "level": 4, "type": "interpunctie",
         "zin": "In Caïro werken kamelen bij de politie." }
     ]
