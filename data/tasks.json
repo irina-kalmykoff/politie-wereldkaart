@@ -60,6 +60,11 @@
         "sentence": "De boef krijgt ___ om zijn polsen.",
         "answers": ["boeien"],
         "hints": ["Het woord begint met de letter b.", "Het zijn metalen ringen om de polsen: ___."]
+      },
+      {
+        "level": 4,
+        "type": "interpunctie",
+        "zin": "Is Brussel de hoofdstad van België?"
       }
     ]
   },
@@ -286,6 +291,11 @@
         "sentence": "De politie zoekt de ___.",
         "answers": ["verdachte"],
         "hints": ["Het woord begint met de letter v.", "Iemand die het misschien deed, is de ___."]
+      },
+      {
+        "level": 4,
+        "type": "interpunctie",
+        "zin": "Is Wenen de hoofdstad van Oostenrijk?"
       }
     ]
   },
@@ -522,7 +532,9 @@
         "fact": "De politie redt mensen uit zee. 🛟",
         "sentence": "De agent ___ de drenkeling.",
         "answers": ["redt"],
-        "hints": ["Het woord begint met de letter r.", "Iemand uit gevaar halen is ___."] }
+        "hints": ["Het woord begint met de letter r.", "Iemand uit gevaar halen is ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Lissabon ligt aan de zee." }
     ]
   },
   "Norway": {
@@ -540,7 +552,9 @@
         "fact": "Iemand belt de politie. 📞",
         "sentence": "De agent krijgt een ___.",
         "answers": ["melding"],
-        "hints": ["Het woord begint met de letter m.", "Een bericht over iets dat gebeurt, is een ___."] }
+        "hints": ["Het woord begint met de letter m.", "Een bericht over iets dat gebeurt, is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Oslo is de hoofdstad van Noorwegen." }
     ]
   },
   "Sweden": {
@@ -648,7 +662,9 @@
         "fact": "Griekenland heeft heel veel eilanden. 🏝️",
         "sentence": "De politie vaart naar het ___.",
         "answers": ["eiland"],
-        "hints": ["Het woord begint met de letter e.", "Land midden in de zee is een ___."] }
+        "hints": ["Het woord begint met de letter e.", "Land midden in de zee is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Wat is Athene een oude stad!" }
     ]
   },
   "Iceland": {
@@ -682,7 +698,9 @@
         "fact": "De politie stelt veel vragen. ❓",
         "sentence": "De dief moet naar het ___.",
         "answers": ["verhoor"],
-        "hints": ["Het woord begint met de letter v.", "Veel vragen stellen heet een ___."] }
+        "hints": ["Het woord begint met de letter v.", "Veel vragen stellen heet een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Washington is de hoofdstad van Amerika." }
     ]
   },
   "Canada": {
@@ -700,7 +718,9 @@
         "fact": "De politie zoekt vanuit de lucht. 🚁",
         "sentence": "De politie vliegt in een ___.",
         "answers": ["helikopter"],
-        "hints": ["Het woord begint met de letter h.", "Hij vliegt met grote wieken: de ___."] }
+        "hints": ["Het woord begint met de letter h.", "Hij vliegt met grote wieken: de ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Ligt Ottawa in Canada?" }
     ]
   },
   "Japan": {
@@ -718,7 +738,9 @@
         "fact": "Japan heeft heel snelle treinen. 🚄",
         "sentence": "Op het station rijdt een snelle ___.",
         "answers": ["trein"],
-        "hints": ["Het woord begint met de letter t.", "Hij rijdt op rails: de ___."] }
+        "hints": ["Het woord begint met de letter t.", "Hij rijdt op rails: de ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Ken jij de stad Tokio?" }
     ]
   },
   "Australia": {
@@ -736,7 +758,9 @@
         "fact": "De politie rijdt over het strand. 🏖️",
         "sentence": "De agent loopt over het ___.",
         "answers": ["strand"],
-        "hints": ["Het woord begint met de letter s.", "Het zand bij de zee is het ___."] }
+        "hints": ["Het woord begint met de letter s.", "Het zand bij de zee is het ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Canberra is de hoofdstad van Australië." }
     ]
   },
   "Brazil": {
@@ -772,7 +796,9 @@
         "fact": "Een camera filmt de straat. 📹",
         "sentence": "Een ___ filmt de dief.",
         "answers": ["camera"],
-        "hints": ["Het woord begint met de letter c.", "Dit apparaat maakt films: de ___."] }
+        "hints": ["Het woord begint met de letter c.", "Dit apparaat maakt films: de ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Wat is Moskou een grote stad!" }
     ]
   },
   "China": {
@@ -790,7 +816,9 @@
         "fact": "De politie gebruikt een kleine drone. 🛸",
         "sentence": "De ___ vliegt door de lucht.",
         "answers": ["drone"],
-        "hints": ["Het woord begint met de letter d.", "Een klein vliegtuig zonder piloot is de ___."] }
+        "hints": ["Het woord begint met de letter d.", "Een klein vliegtuig zonder piloot is de ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Peking is de hoofdstad van China." }
     ]
   },
   "India": {
@@ -898,7 +926,9 @@
         "fact": "In de woestijn is het heet. 🐫",
         "sentence": "Door het zand loopt een ___.",
         "answers": ["kameel"],
-        "hints": ["Het woord begint met de letter k.", "Een woestijndier met bulten is een ___."] }
+        "hints": ["Het woord begint met de letter k.", "Een woestijndier met bulten is een ___."] },
+      { "level": 4, "type": "interpunctie",
+        "zin": "Caïro is een heel grote stad." }
     ]
   },
   "Morocco": {
