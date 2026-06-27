@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16294a"/>
+      <stop offset="1" stop-color="#27466f"/>
+    </linearGradient>
+    <radialGradient id="globe" cx="0.4" cy="0.35" r="0.8">
+      <stop offset="0" stop-color="#3f7cc0"/>
+      <stop offset="1" stop-color="#1f3a5f"/>
+    </radialGradient>
+    <style>
+      text { font-family: 'Lexend','Segoe UI',system-ui,Arial,sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Stylized globe, right side -->
+  <g transform="translate(905,315)">
+    <circle r="225" fill="url(#globe)" stroke="#5a86b8" stroke-width="3"/>
+    <g fill="none" stroke="#9fc0e6" stroke-width="2" opacity="0.55">
+      <ellipse rx="225" ry="80"/>
+      <ellipse rx="225" ry="155"/>
+      <ellipse rx="80" ry="225"/>
+      <ellipse rx="155" ry="225"/>
+      <line x1="-225" y1="0" x2="225" y2="0"/>
+      <line x1="0" y1="-225" x2="0" y2="225"/>
+    </g>
+    <!-- flag pin -->
+    <g transform="translate(40,-30)">
+      <line x1="0" y1="0" x2="0" y2="-78" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+      <rect x="0" y="-78" width="70" height="46" rx="4" fill="#ae1c28"/>
+      <rect x="0" y="-78" width="70" height="15.3" fill="#ffffff" opacity="0.95"/>
+      <rect x="0" y="-47.4" width="70" height="15.3" fill="#21468b"/>
+      <circle cx="0" cy="2" r="8" fill="#ffffff"/>
+    </g>
+  </g>
+
+  <!-- Police badge accent, top-left -->
+  <g transform="translate(90,96)">
+    <circle r="30" fill="#2e6db4"/>
+    <path d="M0,-19 L4.6,-6.2 L18,-6 L7.2,2 L11,15.2 L0,7.4 L-11,15.2 L-7.2,2 L-18,-6 L-4.6,-6.2 Z" fill="#ffd34d"/>
+  </g>
+  <text x="138" y="106" fill="#aac4dd" font-size="26" font-weight="600">Educatief taalspel · NL</text>
+
+  <!-- Title -->
+  <text x="88" y="250" fill="#ffffff" font-size="92" font-weight="700">Politie</text>
+  <text x="88" y="345" fill="#ffffff" font-size="92" font-weight="700">Wereldkaart</text>
+
+  <!-- Subtitle -->
+  <text x="92" y="408" fill="#cfe0f2" font-size="34" font-weight="400">Ontdek de politie van de wereld 🌍👮</text>
+
+  <!-- Stat pills -->
+  <g font-size="30" font-weight="600" fill="#ffffff">
+    <g transform="translate(90,455)">
+      <rect width="220" height="62" rx="31" fill="#2e6db4"/>
+      <text x="110" y="41" text-anchor="middle">95 landen</text>
+    </g>
+    <g transform="translate(330,455)">
+      <rect width="200" height="62" rx="31" fill="#ffffff" fill-opacity="0.14"/>
+      <text x="100" y="41" text-anchor="middle">4 niveaus</text>
+    </g>
+    <g transform="translate(550,455)">
+      <rect width="260" height="62" rx="31" fill="#ffffff" fill-opacity="0.14"/>
+      <text x="130" y="41" text-anchor="middle">voor taalleren</text>
+    </g>
+  </g>
+
+  <!-- URL -->
+  <text x="92" y="566" fill="#8fb0d6" font-size="28" font-weight="600">wereldpolitie.netlify.app</text>
+</svg>
