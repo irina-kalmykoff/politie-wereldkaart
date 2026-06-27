@@ -333,13 +333,14 @@ function bindFillType(body, t, land) {
     inp.addEventListener('input', function () { fb.className = 'feedback'; fb.innerHTML = ''; });
   });
 
+  const alleHints = bouwFillHints(t);
   hintKnop.addEventListener('click', function () {
-    const hints = t.hints || [];
-    if (hints.length === 0) { fb.className = 'feedback'; fb.innerHTML = 'Er is geen hint voor deze opdracht.'; return; }
-    const h = hints[Math.min(hintIndex, hints.length - 1)];
-    hintIndex++;
+    if (alleHints.length === 0) { fb.className = 'feedback'; fb.innerHTML = 'Er is geen hint voor deze opdracht.'; return; }
+    const idx = Math.min(hintIndex, alleHints.length - 1);
     fb.className = 'feedback feedback-hint';
-    fb.innerHTML = '💡 ' + h;
+    fb.innerHTML = '💡 ' + alleHints[idx] +
+      ' <span class="hint-teller">(tip ' + (idx + 1) + ' van ' + alleHints.length + ')</span>';
+    if (hintIndex < alleHints.length - 1) hintIndex++;
   });
 
   controleer.addEventListener('click', function () {
@@ -402,6 +403,56 @@ function shuffle(arr) {
     const tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
   }
   return arr;
+}
+
+// Synoniemen voor de niveau-3 antwoorden: als de eerste tip niet hielp,
+// geeft de hint-knop "een ander woord hiervoor".
+const SYNONIEMEN = {
+  'boeien': 'handboeien', 'gevangenis': 'de cel', 'getuige': 'een ooggetuige',
+  'bureau': 'het politiebureau', 'dief': 'een boef', 'snelheid': 'de vaart',
+  'boete': 'een bekeuring', 'cel': 'de gevangenis', 'achtervolging': 'de jacht',
+  'bewijs': 'een aanwijzing', 'dader': 'de boef', 'zaklamp': 'een zaklantaarn',
+  'melding': 'een bericht', 'penning': 'een badge', 'patrouille': 'een ronde',
+  'bekeuring': 'een boete', 'spoor': 'een afdruk', 'vingerafdruk': 'een afdruk',
+  'vulkaan': 'een vuurberg', 'verhoor': 'een ondervraging', 'strand': 'de kust',
+  'oerwoud': 'de jungle', 'camera': 'een filmcamera', 'menigte': 'een massa',
+  'zakkenroller': 'een dief', 'supporter': 'een fan', 'stroper': 'een wilddief',
+  'boswachter': 'een parkwachter', 'waarschuwing': 'een alarm', 'alarm': 'een waarschuwing',
+  'tractor': 'een trekker', 'storm': 'een onweer', 'bus': 'een autobus',
+  'dieren': 'beesten', 'kano': 'een kajak', 'lawaai': 'herrie', 'ruimte': 'het heelal',
+  'touw': 'een koord', 'karavaan': 'een kamelenstoet', 'mijn': 'een groeve',
+  'helikopter': 'een heli', 'robot': 'een machine', 'berg': 'een top'
+};
+
+// Bouw de oplopende lijst tips voor een typ-opdracht (niveau 3):
+// 1) eerste letter  2) synoniem  3) omschrijving  4) aantal letters
+// 5+) steeds meer beginletters tonen.
+function bouwFillHints(t) {
+  const lijst = [];
+  const gegeven = t.hints || [];
+  const antwoord = (t.answers && t.answers[0]) ? String(t.answers[0]) : '';
+
+  if (gegeven[0]) lijst.push(gegeven[0]);                    // 1) begint met letter ...
+  const syn = antwoord ? SYNONIEMEN[antwoord.toLowerCase()] : null;
+  if (syn) lijst.push('Een ander woord hiervoor is: ' + syn + '.');   // 2) synoniem
+  for (let i = 1; i < gegeven.length; i++) lijst.push(gegeven[i]);     // 3) omschrijving(en)
+
+  if (antwoord.length > 1) {
+    lijst.push('Het woord heeft ' + antwoord.length + ' letters.');    // 4) lengte
+    lijst.push('Zo begint het: ' + onthulWoord(antwoord, Math.min(2, antwoord.length - 1)));
+    const half = Math.ceil(antwoord.length / 2);
+    if (half > 2 && half < antwoord.length) {
+      lijst.push('Bijna goed: ' + onthulWoord(antwoord, half));
+    }
+  }
+  return lijst;
+}
+
+// Toon de eerste n letters van een woord, de rest als streepjes: "g e _ _ _".
+function onthulWoord(woord, n) {
+  const zichtbaar = woord.slice(0, n);
+  const rest = woord.slice(n).replace(/\S/g, '_');
+  return (zichtbaar + rest).split('').join(' ');
 }
 
 /* ---------- Sluiten met Esc of klik op de donkere achtergrond ---------- */

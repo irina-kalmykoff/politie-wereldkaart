@@ -422,6 +422,7 @@ main {
 .invul-fout { border-bottom-color: var(--kleur-fout); background: #f7e0d8; }
 
 .feedback-hint { color: var(--kleur-accent); }
+.hint-teller { font-size: 0.8rem; font-weight: 400; color: #93a1b0; }
 
 /* ----- Actieknoppen onder de opdracht ----- */
 .taak-acties { flex-wrap: wrap; }
