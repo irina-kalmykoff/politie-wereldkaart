@@ -27,6 +27,14 @@
         "sentence": "De politie ___ de zaak op.",
         "answers": ["lost"],
         "hints": ["Het woord begint met de letter l.", "De politie ___ de zaak op (van: oplossen)."]
+      },
+      {
+        "level": 4,
+        "type": "write_sentence",
+        "fact": "De Nederlandse politie heeft agenten te paard. 🐴",
+        "prompt": "Schrijf zelf een korte zin over de politie. (3–4 woorden)",
+        "keyword": "politie",
+        "example": "De politie helpt mensen."
       }
     ]
   },
@@ -118,6 +126,14 @@
         "sentence": "A car waits in the ___.",
         "answers": ["garage"],
         "hints": ["The word starts with the letter g.", "A car is parked or fixed here: the ___."]
+      },
+      {
+        "level": 4,
+        "type": "write_sentence",
+        "fact": "Most British police officers carry no gun. 👮",
+        "prompt": "Write your own short sentence about the police. (3–4 words)",
+        "keyword": "police",
+        "example": "The police help people."
       }
     ]
   },
@@ -148,6 +164,14 @@
         "sentence": "De ___ zag de dief.",
         "answers": ["getuige"],
         "hints": ["Het woord begint met de letter g.", "Iemand die iets zag, is een ___."]
+      },
+      {
+        "level": 4,
+        "type": "write_sentence",
+        "fact": "De Franse gendarmerie hoort bij het leger. 🎖️",
+        "prompt": "Maak een zin met het woord 'agent'.",
+        "keyword": "agent",
+        "example": "De agent is aardig."
       }
     ]
   },
@@ -298,6 +322,14 @@
         "sentence": "De dief hoort het ___.",
         "answers": ["alarm"],
         "hints": ["Het woord begint met de letter a.", "Een hard geluid bij gevaar is het ___."]
+      },
+      {
+        "level": 4,
+        "type": "write_sentence",
+        "fact": "De Ierse politie draagt meestal geen wapen. 🍀",
+        "prompt": "Wat doet de politie? Schrijf een korte zin.",
+        "keyword": "politie",
+        "example": "De politie vangt boeven."
       }
     ]
   },
@@ -328,6 +360,14 @@
         "sentence": "Hij krijgt een hoge ___.",
         "answers": ["boete"],
         "hints": ["Het woord begint met de letter b.", "Geld betalen als straf is een ___."]
+      },
+      {
+        "level": 4,
+        "type": "write_sentence",
+        "fact": "Monaco heeft de meeste politie per inwoner. 👮",
+        "prompt": "Schrijf een korte zin over de agent.",
+        "keyword": "agent",
+        "example": "De agent loopt buiten."
       }
     ]
   },
@@ -448,6 +488,14 @@
         "sentence": "De agent vindt een ___.",
         "answers": ["bewijs"],
         "hints": ["Het woord begint met de letter b.", "Een spoor van de dader is een ___."]
+      },
+      {
+        "level": 4,
+        "type": "write_sentence",
+        "fact": "De Zwitserse Garde is het kleinste leger. 💂",
+        "prompt": "Schrijf een korte zin over de wacht.",
+        "keyword": "wacht",
+        "example": "De wacht staat stil."
       }
     ]
   },
@@ -466,7 +514,13 @@
         "fact": "De politie zoekt de schuldige. 🔍",
         "sentence": "De agent pakt de ___.",
         "answers": ["dader"],
-        "hints": ["Het woord begint met de letter d.", "Wie het deed, is de ___."] }
+        "hints": ["Het woord begint met de letter d.", "Wie het deed, is de ___."] },
+      { "level": 4, "type": "write_sentence",
+        "fact": "De Italiaanse politie heeft een Lamborghini. 🏎️",
+        "prompt": "Maak een zin met: politie, rijdt, snel.",
+        "words": ["politie", "rijdt", "snel"],
+        "keyword": "politie",
+        "example": "De politie rijdt snel." }
     ]
   },
   "Spain": {
@@ -520,7 +574,12 @@
         "fact": "Iemand belt de politie. 📞",
         "sentence": "De agent krijgt een ___.",
         "answers": ["melding"],
-        "hints": ["Het woord begint met de letter m.", "Een bericht over iets dat gebeurt, is een ___."] }
+        "hints": ["Het woord begint met de letter m.", "Een bericht over iets dat gebeurt, is een ___."] },
+      { "level": 4, "type": "write_sentence",
+        "fact": "De Noorse politie draagt zelden een pistool. 🕊️",
+        "prompt": "Wat doet een agent? Schrijf een zin.",
+        "keyword": "agent",
+        "example": "De agent helpt jou." }
     ]
   },
   "Sweden": {
@@ -646,7 +705,12 @@
         "fact": "Op IJsland zijn veel vulkanen. 🌋",
         "sentence": "De agent kijkt naar de ___.",
         "answers": ["vulkaan"],
-        "hints": ["Het woord begint met de letter v.", "Een berg die vuur spuwt, is een ___."] }
+        "hints": ["Het woord begint met de letter v.", "Een berg die vuur spuwt, is een ___."] },
+      { "level": 4, "type": "write_sentence",
+        "fact": "De IJslandse politie draagt geen pistool. 🕊️",
+        "prompt": "Maak een zin over de agent. (3–4 woorden)",
+        "keyword": "agent",
+        "example": "De agent is rustig." }
     ]
   },
   "United States of America": {
@@ -664,7 +728,12 @@
         "fact": "De politie stelt veel vragen. ❓",
         "sentence": "De dief moet naar het ___.",
         "answers": ["verhoor"],
-        "hints": ["Het woord begint met de letter v.", "Veel vragen stellen heet een ___."] }
+        "hints": ["Het woord begint met de letter v.", "Veel vragen stellen heet een ___."] },
+      { "level": 4, "type": "write_sentence",
+        "fact": "Amerika heeft wel 18.000 politiekorpsen. 🚓",
+        "prompt": "Maak een zin met het woord 'politie'.",
+        "keyword": "politie",
+        "example": "De politie rijdt rond." }
     ]
   },
   "Canada": {
@@ -682,7 +751,13 @@
         "fact": "De politie zoekt vanuit de lucht. 🚁",
         "sentence": "De politie vliegt in een ___.",
         "answers": ["helikopter"],
-        "hints": ["Het woord begint met de letter h.", "Hij vliegt met grote wieken: de ___."] }
+        "hints": ["Het woord begint met de letter h.", "Hij vliegt met grote wieken: de ___."] },
+      { "level": 4, "type": "write_sentence",
+        "fact": "Canadese agenten rijden soms op een paard. 🐴",
+        "prompt": "Maak een zin met: agent, paard.",
+        "words": ["agent", "paard"],
+        "keyword": "agent",
+        "example": "De agent is sterk." }
     ]
   },
   "Japan": {
@@ -700,7 +775,12 @@
         "fact": "Japan heeft heel snelle treinen. 🚄",
         "sentence": "Op het station rijdt een snelle ___.",
         "answers": ["trein"],
-        "hints": ["Het woord begint met de letter t.", "Hij rijdt op rails: de ___."] }
+        "hints": ["Het woord begint met de letter t.", "Hij rijdt op rails: de ___."] },
+      { "level": 4, "type": "write_sentence",
+        "fact": "In Japan is er weinig misdaad. 🏮",
+        "prompt": "Schrijf een korte zin over de politie.",
+        "keyword": "politie",
+        "example": "De politie is aardig." }
     ]
   },
   "Australia": {
@@ -1006,7 +1086,12 @@
         "fact": "De berg is hoog en steil. ⛰️",
         "sentence": "De wandelaar klimt op de ___.",
         "answers": ["berg"],
-        "hints": ["Het woord begint met de letter b.", "Een heel hoge heuvel is een ___."] }
+        "hints": ["Het woord begint met de letter b.", "Een heel hoge heuvel is een ___."] },
+      { "level": 4, "type": "write_sentence",
+        "fact": "De politie draagt hier meestal geen wapen. 🥝",
+        "prompt": "Schrijf een korte zin over een agent.",
+        "keyword": "agent",
+        "example": "De agent is vriendelijk." }
     ]
   },
   "Saudi Arabia": {

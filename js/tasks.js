@@ -14,8 +14,8 @@ fetch('data/tasks.json')
   .then(d => { TASKS = d; console.log('Opdrachten geladen voor', Object.keys(d).length, 'land(en).'); })
   .catch(e => console.error('Kon opdrachten niet laden:', e));
 
-const NIVEAU_NAAM  = { 1: 'Makkelijk', 2: 'Gemiddeld', 3: 'Moeilijk' };
-const NIVEAU_KLEUR = { 1: '#2e8b57', 2: '#c08a2b', 3: '#b5562b' };
+const NIVEAU_NAAM  = { 1: 'Makkelijk', 2: 'Gemiddeld', 3: 'Moeilijk', 4: 'Uitdaging' };
+const NIVEAU_KLEUR = { 1: '#2e8b57', 2: '#c08a2b', 3: '#b5562b', 4: '#6b4ea6' };
 
 function popup() { return document.getElementById('task-popup'); }
 function sluitPopup() {
@@ -59,7 +59,7 @@ function toonNiveaukeuze(land, data) {
   const titel = vlagImg(land) + land.naamNL;
   const opgelost = (typeof getSolvedLevels === 'function') ? getSolvedLevels(land.key) : [];
 
-  const knoppen = [1, 2, 3].map(function (lvl) {
+  const knoppen = [1, 2, 3, 4].map(function (lvl) {
     const heeft = data.tasks.some(function (t) { return t.level === lvl; });
     if (!heeft) return '';
     const klaar = opgelost.indexOf(lvl) !== -1;
@@ -104,6 +104,11 @@ function toonTaak(land, data, taak) {
     actiesHTML = '<button class="hint-knop">💡 Hint</button>' +
                  '<button class="controleer-knop">Controleer</button>' +
                  '<button class="terug-knop">← Ander niveau</button>';
+  } else if (taak.type === 'write_sentence') {
+    opdrachtHTML = renderWriteSentence(taak);
+    actiesHTML = '<button class="voorbeeld-knop">💡 Voorbeeld</button>' +
+                 '<button class="controleer-knop">Controleer</button>' +
+                 '<button class="terug-knop">← Ander niveau</button>';
   } else {
     opdrachtHTML = '<p>Onbekend opdrachttype.</p>';
     actiesHTML = '<button class="terug-knop">← Kies ander niveau</button>';
@@ -127,6 +132,7 @@ function toonTaak(land, data, taak) {
   if (taak.type === 'fill_choice') bindFillChoice(body, taak, land);
   else if (taak.type === 'drag_order') bindDragOrder(body, taak, land);
   else if (taak.type === 'fill_type') bindFillType(body, taak, land);
+  else if (taak.type === 'write_sentence') bindWriteSentence(body, taak, land);
 }
 
 // Lees het weetje + de zin (of instructie) hardop voor, in de juiste taal.
@@ -136,6 +142,7 @@ function leesTaakVoor(land, taak) {
   const stukken = [taak.fact];
   if (taak.sentence) stukken.push(taak.sentence);
   else if (taak.instruction) stukken.push(taak.instruction);
+  else if (taak.prompt) stukken.push(taak.prompt);
   if (typeof spreekUit === 'function') spreekUit(stukken.join('. '), lang);
 }
 
@@ -369,6 +376,70 @@ function bindFillType(body, t, land) {
       if (typeof geluidFout === 'function') geluidFout();
     }
   });
+}
+
+/* =========================================================
+   Niveau 4 — schrijf zelf een korte zin (write_sentence)
+   ========================================================= */
+function renderWriteSentence(t) {
+  let html = '<p class="schrijf-vraag">' + t.prompt + '</p>';
+  if (t.words && t.words.length) {
+    html += '<p class="woordsuggestie">Je mag deze woorden gebruiken: ' +
+      t.words.map(function (w) { return '<span class="woord-chip">' + w + '</span>'; }).join(' ') + '</p>';
+  }
+  html += '<textarea class="schrijfveld" rows="2" autocomplete="off" ' +
+          'placeholder="Typ hier je eigen zin…" aria-label="Schrijf hier je eigen zin"></textarea>';
+  return html;
+}
+
+function bindWriteSentence(body, t, land) {
+  const veld = body.querySelector('.schrijfveld');
+  const fb = body.querySelector('.feedback');
+  const controleer = body.querySelector('.controleer-knop');
+  const voorbeeldKnop = body.querySelector('.voorbeeld-knop');
+
+  veld.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); controleer.click(); }
+  });
+  veld.addEventListener('input', function () { fb.className = 'feedback'; fb.innerHTML = ''; });
+
+  if (voorbeeldKnop) voorbeeldKnop.addEventListener('click', function () {
+    if (!t.example) return;
+    fb.className = 'feedback feedback-hint';
+    fb.innerHTML = '💡 Een voorbeeld: "' + t.example + '"';
+  });
+
+  controleer.addEventListener('click', function () {
+    const res = checkWriteSentence(t, veld.value);
+    if (res.ok) {
+      veld.disabled = true;
+      controleer.disabled = true;
+      fb.className = 'feedback feedback-goed';
+      fb.innerHTML = succesHTML(land) +
+        (t.example ? '<br><span class="vlag-behaald">Bijvoorbeeld: "' + t.example + '"</span>' : '');
+      belonen(land, t.level);
+    } else {
+      fb.className = 'feedback feedback-fout';
+      fb.innerHTML = '✏️ ' + res.reden;
+      if (typeof geluidFout === 'function') geluidFout();
+    }
+  });
+}
+
+// Controleer een zelfgeschreven zin: lengte, hoofdletter, leesteken, sleutelwoord.
+function checkWriteSentence(t, tekst) {
+  const zin = (tekst || '').trim();
+  if (!zin) return { ok: false, reden: 'Schrijf eerst je eigen zin.' };
+  const woorden = zin.split(/\s+/).filter(Boolean);
+  const minW = t.min || 3, maxW = t.max || 5;
+  if (woorden.length < minW) return { ok: false, reden: 'Maak je zin iets langer — minstens ' + minW + ' woorden.' };
+  if (woorden.length > maxW) return { ok: false, reden: 'Houd je zin kort — ongeveer 3 of 4 woorden.' };
+  if (!/^[A-ZÀ-ÖØ-Þ]/.test(zin)) return { ok: false, reden: 'Begin je zin met een hoofdletter.' };
+  if (!/[.!?]$/.test(zin)) return { ok: false, reden: 'Zet een punt (.) aan het eind van je zin.' };
+  if (t.keyword && zin.toLowerCase().indexOf(t.keyword.toLowerCase()) === -1) {
+    return { ok: false, reden: 'Gebruik het woord "' + t.keyword + '" in je zin.' };
+  }
+  return { ok: true };
 }
 
 /* =========================================================

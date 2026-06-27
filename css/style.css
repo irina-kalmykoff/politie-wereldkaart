@@ -424,6 +424,35 @@ main {
 .feedback-hint { color: var(--kleur-accent); }
 .hint-teller { font-size: 0.8rem; font-weight: 400; color: #93a1b0; }
 
+/* ----- Niveau 4: zelf een zin schrijven ----- */
+.schrijf-vraag { font-size: 1.15rem; font-weight: 600; color: var(--kleur-kop); margin: 0 0 12px; }
+.woordsuggestie { font-size: 0.95rem; color: #5a6b7b; margin: 0 0 12px; }
+.schrijfveld {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  padding: 12px 14px;
+  border: 2px solid #c7d6e6;
+  border-radius: 12px;
+  background: #f7fbff;
+  resize: vertical;
+}
+.schrijfveld:focus { outline: none; border-color: var(--kleur-accent); background: #eaf3ff; }
+.schrijfveld:disabled { background: #d8f3e0; border-color: var(--kleur-goed); color: var(--kleur-goed); }
+
+.voorbeeld-knop {
+  font-family: inherit;
+  font-size: 1rem;
+  background: #fff5e0;
+  color: #8a6516;
+  border: 2px solid #e9cd86;
+  border-radius: 10px;
+  padding: 9px 16px;
+  cursor: pointer;
+}
+.voorbeeld-knop:hover:not(:disabled) { background: #ffeec4; }
+
 /* ----- Actieknoppen onder de opdracht ----- */
 .taak-acties { flex-wrap: wrap; }
 .controleer-knop {
