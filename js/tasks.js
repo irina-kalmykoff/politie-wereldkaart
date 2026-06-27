@@ -109,14 +109,19 @@ function toonTaak(land, data, taak) {
     actiesHTML = '<button class="voorbeeld-knop">💡 Voorbeeld</button>' +
                  '<button class="controleer-knop">Controleer</button>' +
                  '<button class="terug-knop">← Ander niveau</button>';
+  } else if (taak.type === 'luister_tekst') {
+    opdrachtHTML = renderLuisterTekst(taak);
+    actiesHTML = '<button class="hint-knop">💡 Hint</button>' +
+                 '<button class="controleer-knop">Controleer</button>' +
+                 '<button class="terug-knop">← Ander niveau</button>';
   } else {
     opdrachtHTML = '<p>Onbekend opdrachttype.</p>';
     actiesHTML = '<button class="terug-knop">← Kies ander niveau</button>';
   }
 
   const body = toonKaart(titel, sub,
-    '<p class="fact">💡 ' + taak.fact + '</p>' +
-    '<button class="lees-knop" type="button" aria-label="Lees de opdracht voor">🔊 Lees voor</button>' +
+    (taak.fact ? '<p class="fact">💡 ' + taak.fact + '</p>' +
+      '<button class="lees-knop" type="button" aria-label="Lees de opdracht voor">🔊 Lees voor</button>' : '') +
     (taak.instruction ? '<p class="instructie">' + taak.instruction + '</p>' : '') +
     opdrachtHTML +
     '<div class="feedback" aria-live="polite"></div>' +
@@ -133,6 +138,7 @@ function toonTaak(land, data, taak) {
   else if (taak.type === 'drag_order') bindDragOrder(body, taak, land);
   else if (taak.type === 'fill_type') bindFillType(body, taak, land);
   else if (taak.type === 'write_sentence') bindWriteSentence(body, taak, land);
+  else if (taak.type === 'luister_tekst') bindLuisterTekst(body, taak, land);
 }
 
 // Lees het weetje + de zin (of instructie) hardop voor, in de juiste taal.
@@ -443,6 +449,89 @@ function checkWriteSentence(t, tekst) {
 }
 
 /* =========================================================
+   Niveau 4 (variant) — luister-dictee (luister_tekst)
+   Een kort tekstje wordt voorgelezen; de speler vult ±3
+   ontbrekende woorden in. Gaten staan in de tekst als [woord].
+   ========================================================= */
+function parseGapTekst(text) {
+  const answers = [];
+  let i = 0;
+  const html = (text || '').replace(/\[([^\]]+)\]/g, function (m, w) {
+    const idx = i++;
+    answers.push(w);
+    return '<input type="text" class="invul invul-luister" data-i="' + idx + '" ' +
+           'autocomplete="off" autocapitalize="off" spellcheck="false" ' +
+           'aria-label="Schrijf het woord dat je hoort">';
+  });
+  const plain = (text || '').replace(/\[([^\]]+)\]/g, '$1');
+  return { plain: plain, html: html, answers: answers };
+}
+
+function renderLuisterTekst(t) {
+  const parsed = parseGapTekst(t.text);
+  return '<p class="luister-intro">' + (t.intro || 'Luister goed en schrijf de woorden die je hoort.') + '</p>' +
+         '<button class="luister-knop" type="button">🔊 Luister</button>' +
+         '<p class="luister-tekst">' + parsed.html + '</p>';
+}
+
+function bindLuisterTekst(body, t, land) {
+  const parsed = parseGapTekst(t.text);
+  const inputs = Array.prototype.slice.call(body.querySelectorAll('.invul-luister'));
+  const fb = body.querySelector('.feedback');
+  const controleer = body.querySelector('.controleer-knop');
+  const luisterKnop = body.querySelector('.luister-knop');
+  const lang = (TASKS[land.key] && TASKS[land.key].lang === 'en') ? 'en-GB' : 'nl-NL';
+
+  function luister() { if (typeof spreekUit === 'function') spreekUit(parsed.plain, lang); }
+  if (luisterKnop) luisterKnop.addEventListener('click', luister);
+  luister();   // speel de tekst één keer automatisch af bij het openen
+
+  inputs.forEach(function (inp) {
+    inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') controleer.click(); });
+    inp.addEventListener('input', function () { fb.className = 'feedback'; fb.innerHTML = ''; });
+  });
+
+  // Hint-knop: oplopende tips (eerste letters → meer letters).
+  const hintKnop = body.querySelector('.hint-knop');
+  let hintIndex = 0;
+  const alleHints = bouwLuisterHints(parsed.answers);
+  if (hintKnop) hintKnop.addEventListener('click', function () {
+    if (!alleHints.length) return;
+    const idx = Math.min(hintIndex, alleHints.length - 1);
+    fb.className = 'feedback feedback-hint';
+    fb.innerHTML = '💡 ' + alleHints[idx] +
+      ' <span class="hint-teller">(tip ' + (idx + 1) + ' van ' + alleHints.length + ')</span>';
+    if (hintIndex < alleHints.length - 1) hintIndex++;
+  });
+
+  controleer.addEventListener('click', function () {
+    let allesGoed = true;
+    inputs.forEach(function (inp, i) {
+      const verwacht = parsed.answers[i] || '';
+      inp.classList.remove('invul-goed', 'invul-fout');
+      if (isCloseEnough(inp.value, verwacht)) {
+        inp.classList.add('invul-goed');
+        inp.value = verwacht;
+        inp.disabled = true;
+      } else {
+        inp.classList.add('invul-fout');
+        allesGoed = false;
+      }
+    });
+    if (allesGoed) {
+      fb.className = 'feedback feedback-goed';
+      fb.innerHTML = succesHTML(land);
+      controleer.disabled = true;
+      belonen(land, t.level);
+    } else {
+      fb.className = 'feedback feedback-fout';
+      fb.innerHTML = '❌ Bijna! Luister nog een keer en kijk naar de rode vakjes.';
+      if (typeof geluidFout === 'function') geluidFout();
+    }
+  });
+}
+
+/* =========================================================
    Hulpfuncties
    ========================================================= */
 // Tolerant nakijken: negeer hoofdletters/spaties en één typefout (Levenshtein ≤ 1)
@@ -524,6 +613,19 @@ function onthulWoord(woord, n) {
   const zichtbaar = woord.slice(0, n);
   const rest = woord.slice(n).replace(/\S/g, '_');
   return (zichtbaar + rest).split('').join(' ');
+}
+
+// Oplopende tips voor het luister-dictee: eerste letters → meer letters van elk woord.
+function bouwLuisterHints(answers) {
+  if (!answers || !answers.length) return [];
+  const eerste = answers.map(function (w) { return w.charAt(0); }).join(', ');
+  const begin2 = answers.map(function (w) { return onthulWoord(w, Math.min(2, w.length - 1)); }).join('   ·   ');
+  const half = answers.map(function (w) { return onthulWoord(w, Math.max(2, Math.ceil(w.length / 2))); }).join('   ·   ');
+  return [
+    'De woorden beginnen met:  ' + eerste,
+    'Zo beginnen ze:  ' + begin2,
+    'Bijna goed:  ' + half
+  ];
 }
 
 /* ---------- Sluiten met Esc of klik op de donkere achtergrond ---------- */

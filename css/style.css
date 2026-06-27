@@ -453,6 +453,28 @@ main {
 }
 .voorbeeld-knop:hover:not(:disabled) { background: #ffeec4; }
 
+/* ----- Niveau 4: luister-dictee ----- */
+.luister-intro { font-weight: 600; color: var(--kleur-kop); margin: 0 0 12px; }
+.luister-knop {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--kleur-accent);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 18px;
+  margin: 0 0 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.luister-knop:hover { background: #275f9c; }
+.luister-knop:active { transform: scale(0.97); }
+.luister-tekst { font-size: 1.2rem; line-height: 2.2; margin: 0; }
+.invul-luister { min-width: 84px; }
+
 /* ----- Actieknoppen onder de opdracht ----- */
 .taak-acties { flex-wrap: wrap; }
 .controleer-knop {
