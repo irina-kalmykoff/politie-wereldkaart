@@ -13,7 +13,7 @@ moeilijkheidsniveaus**, met **voorlezen** en **geluid**.
 
 ## 📊 Stand van het project
 
-Klaar en speelbaar. **95 landen** wereldwijd, elk met **4 niveaus** — samen **380
+Klaar en speelbaar. **111 landen** wereldwijd, elk met **4 niveaus** — samen **444
 opdrachten**. De vlag van een land verschijnt pas als alle vier de niveaus zijn opgelost.
 
 - **Niveau 1** — kies het juiste woord (uit 3 opties)
@@ -35,7 +35,7 @@ hem aan te zetten.
 ## ✨ Wat kan het?
 
 - **Wereldkaart** met reliëf-ondergrond (geografisch, niet politiek) en klikbare landgrenzen.
-- **95 landen** met elk 4 opdrachten over politie (Nederlands; het VK in het Engels).
+- **111 landen** met elk 4 opdrachten over politie (Nederlands; het VK in het Engels).
 - **Vier niveaus** per land:
   1. **Makkelijk** — kies het juiste woord uit drie opties.
   2. **Gemiddeld** — sleep (of klik) woorden in de juiste volgorde.
@@ -215,7 +215,7 @@ voordat je ze ergens officieel gebruikt.
 - [x] Stap 3 — Opdracht-venster + niveaukeuze
 - [x] Stap 4 — Drie opdrachttypes werkend
 - [x] Stap 5 — Vlag + voortgang opslaan
-- [x] Stap 6 — Inhoud: **95 landen**, wereldwijd, divers, elk 4 niveaus
+- [x] Stap 6 — Inhoud: **111 landen**, wereldwijd, divers, elk 4 niveaus
 - [x] Stap 7 — Geluid: voorlezen + geluidjes + stemkiezer
 - [x] Stap 8–10 — Afronding: README, attributie, code op GitHub
 - [ ] **Publiceren: GitHub Pages nog inschakelen** (Settings → Pages → branch `main`, map `/root`)
